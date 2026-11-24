@@ -3,14 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Andrea Novoa | Portafolio Periodístico</title>
-    
+    <title>Camila Andrea Novoa | Periodista &amp; Creadora Digital</title>
+
     <link rel="icon" href="favicon.ico" type="image/x-icon">
-    
-    <meta property="og:title" content="Camila Novoa | Periodista W Radio">
-    <meta property="og:description" content="Portafolio profesional de Camila Andrea Novoa. Periodismo, Radio y Producción Multimedia.">
-    <meta property="og:image" content="pic1.jpg">
+
+    <meta property="og:title" content="Camila Andrea Novoa | Periodista & Creadora Digital">
+    <meta property="og:description" content="Portafolio profesional de Camila Andrea Novoa Ramírez. Periodismo, Radio, Community & Producción Multimedia.">
+    <meta property="og:image" content="perfil.jpeg">
     <meta property="og:type" content="website">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet">
 
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -18,666 +22,1608 @@
             theme: {
                 extend: {
                     colors: {
-                        'brand-accent': '#c2410c',  /* Naranja Terracota */
-                        'brand-light': '#ea580c',
-                        'brand-dark': '#7c2d12',
+                        ink: '#1E1E2C',
+                        muted: '#6B7280',
+                        blush: {
+                            50: '#FFF7F9',
+                            100: '#FDECF1',
+                            200: '#FBD4E0',
+                            300: '#F7B4C9',
+                            400: '#F293B2',
+                        },
+                        peri: {
+                            50: '#F2F6FF',
+                            100: '#E3ECFF',
+                            200: '#C5D8FE',
+                            300: '#9BB9FC',
+                            500: '#5B8DEF',
+                            600: '#4476E2',
+                        },
                     },
                     fontFamily: {
-                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        sans: ['DM Sans', 'system-ui', 'sans-serif'],
+                        serif: ['Playfair Display', 'Georgia', 'serif'],
                     },
-                    animation: {
-                        'fade-in-up': 'fadeInUp 0.8s ease-out forwards',
-                        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
-                    },
-                    keyframes: {
-                        fadeInUp: {
-                            '0%': { opacity: '0', transform: 'translateY(20px)' },
-                            '100%': { opacity: '1', transform: 'translateY(0)' },
-                        }
+                    boxShadow: {
+                        soft: '0 14px 40px -12px rgba(91, 141, 239, 0.14)',
+                        blush: '0 18px 45px -15px rgba(242, 147, 178, 0.28)',
+                        pill: '0 10px 24px -6px rgba(91, 141, 239, 0.45)',
                     }
                 }
             }
         }
     </script>
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    
+
     <style>
-        body { font-family: 'Plus Jakarta Sans', sans-serif; }
-        .blob { position: absolute; filter: blur(80px); z-index: 0; opacity: 0.4; }
-        
-        /* Animación del Cintillo de Noticias */
-        @keyframes marquee {
-            0% { transform: translateX(100%); }
-            100% { transform: translateX(-100%); }
+        body {
+            font-family: 'DM Sans', system-ui, sans-serif;
+            background-color: #FFFFFF;
+            color: #1E1E2C;
         }
 
-        /* Estilos para el botón de WhatsApp mejorado */
-        .whatsapp-btn {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            z-index: 100;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 60px;
-            height: 60px;
-            background-color: #25D366;
-            color: white;
-            border-radius: 50%;
-            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
-            transition: all 0.3s ease;
+        /* Signature curved underline from reference */
+        .wave-word {
+            position: relative;
+            display: inline-block;
+            z-index: 1;
         }
-        .whatsapp-btn:hover {
-            transform: scale(1.1);
-            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
-        }
-        .whatsapp-pulse {
+        .wave-word::after {
+            content: '';
             position: absolute;
-            width: 100%;
-            height: 100%;
-            background-color: #25D366;
-            border-radius: 50%;
+            left: -2%;
+            right: -2%;
+            bottom: -5px;
+            height: 11px;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 180 14' fill='none'%3E%3Cpath d='M3 10.5C45 2.5 125 2.5 177 9.5' stroke='%235B8DEF' stroke-width='3.2' stroke-linecap='round'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
             z-index: -1;
-            opacity: 0.7;
-            animation: whatsapp-pulse 2s infinite;
         }
-        @keyframes whatsapp-pulse {
-            0% { transform: scale(1); opacity: 0.7; }
-            100% { transform: scale(1.5); opacity: 0; }
+        .wave-pink::after {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 180 14' fill='none'%3E%3Cpath d='M3 10.5C45 2.5 125 2.5 177 9.5' stroke='%23F293B2' stroke-width='3.2' stroke-linecap='round'/%3E%3C/svg%3E");
         }
 
-        /* Modal para Galería (Lightbox) */
+        /* Seamless top soft ticker */
+        .ticker-track {
+            display: flex;
+            width: max-content;
+            animation: ticker-scroll 34s linear infinite;
+        }
+        .ticker-track:hover {
+            animation-play-state: paused;
+        }
+        @keyframes ticker-scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        /* Scroll reveal */
+        .reveal {
+            opacity: 0;
+            transform: translateY(18px);
+            transition: opacity 0.65s cubic-bezier(0.22, 1, 0.36, 1), transform 0.65s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+        .reveal.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Filter pills */
+        .filter-pill[aria-pressed="true"] {
+            background-color: #5B8DEF;
+            color: #FFFFFF;
+            border-color: #5B8DEF;
+            box-shadow: 0 8px 20px -6px rgba(91, 141, 239, 0.45);
+        }
+
+        /* Clean audio styling */
+        audio {
+            border-radius: 9999px;
+        }
+
+        /* Keep fullscreen videos uncropped regardless of orientation */
+        video:fullscreen,
+        video:-webkit-full-screen,
+        video:-moz-full-screen {
+            object-fit: contain !important;
+            background-color: #000000;
+        }
+
+        /* Chic on-brand WhatsApp CTA Pill */
+        .whatsapp-cta {
+            position: fixed;
+            bottom: 22px;
+            right: 22px;
+            z-index: 90;
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            padding: 8px 18px 8px 8px;
+            background: rgba(255, 255, 255, 0.96);
+            backdrop-filter: blur(12px);
+            border: 1.5px solid #C5D8FE;
+            border-radius: 9999px;
+            box-shadow: 0 14px 34px -8px rgba(91, 141, 239, 0.34), 0 4px 12px rgba(242, 147, 178, 0.18);
+            transition: transform 0.25s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.25s ease, border-color 0.25s ease;
+        }
+        .whatsapp-cta:hover {
+            transform: translateY(-3px);
+            border-color: #5B8DEF;
+            box-shadow: 0 18px 38px -8px rgba(91, 141, 239, 0.48), 0 6px 16px rgba(242, 147, 178, 0.28);
+        }
+
+        /* Lightbox */
         #lightbox {
             display: none;
             position: fixed;
+            inset: 0;
             z-index: 1000;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.9);
+            background: rgba(30, 30, 44, 0.92);
+            backdrop-filter: blur(10px);
             align-items: center;
             justify-content: center;
+            padding: 24px;
+        }
+        #lightbox.open {
+            display: flex;
         }
         #lightbox img {
-            max-width: 90%;
-            max-height: 90vh;
-            border-radius: 8px;
-            box-shadow: 0 0 20px rgba(0,0,0,0.5);
+            max-width: min(92vw, 1080px);
+            max-height: 84vh;
+            object-fit: contain;
+            border-radius: 20px;
+            box-shadow: 0 24px 60px rgba(0, 0, 0, 0.45);
         }
     </style>
 </head>
-<body class="bg-gray-50 text-gray-900 antialiased">
+<body class="bg-white text-ink antialiased selection:bg-blush-200 selection:text-ink">
 
-    <div class="bg-gray-900 text-white text-xs font-bold py-2 overflow-hidden z-50 relative border-b border-gray-800">
-        <div class="whitespace-nowrap animate-[marquee_25s_linear_infinite] flex gap-16 w-full">
-            <span class="flex items-center gap-2"><i class="ph-fill ph-broadcast text-red-500"></i> EN VIVO: La Hora del Regreso (2pm - 6pm)</span>
-            <span class="flex items-center gap-2"><i class="ph-fill ph-globe text-blue-400"></i> Cobertura Nacional e Internacional</span>
-            <span class="flex items-center gap-2"><i class="ph-fill ph-microphone-stage text-brand-accent"></i> Periodismo W Radio</span>
-            <span class="flex items-center gap-2"><i class="ph-fill ph-newspaper text-green-400"></i> Redacción Digital y Crónica</span>
-            <span class="flex items-center gap-2"><i class="ph-fill ph-broadcast text-red-500"></i> EN VIVO: La Hora del Regreso (2pm - 6pm)</span>
-            <span class="flex items-center gap-2"><i class="ph-fill ph-globe text-blue-400"></i> Cobertura Nacional e Internacional</span>
+    <!-- Soft Pastel Broadcast Ticker -->
+    <div class="bg-blush-100/90 text-ink text-xs font-medium py-2.5 overflow-hidden border-b border-blush-200/70">
+        <div class="ticker-track">
+            <div class="flex items-center gap-10 pr-10">
+                <span class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-rose-500 animate-pulse"></span> <strong>Al Aire:</strong> La Hora del Regreso (2:00 PM – 6:00 PM)</span>
+                <span class="text-blush-400">✦</span>
+                <span class="flex items-center gap-2"><i class="ph-fill ph-sparkle text-peri-500"></i> Periodismo Digital &amp; Community Management</span>
+                <span class="text-blush-400">✦</span>
+                <span class="flex items-center gap-2"><i class="ph-fill ph-microphone-stage text-rose-400"></i> W Radio &amp; Caracol Radio</span>
+                <span class="text-blush-400">✦</span>
+                <span class="flex items-center gap-2"><i class="ph-fill ph-globe-hemisphere-west text-peri-500"></i> Cobertura Nacional e Internacional</span>
+                <span class="text-blush-400">✦</span>
+            </div>
+            <div class="flex items-center gap-10 pr-10" aria-hidden="true">
+                <span class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-rose-500 animate-pulse"></span> <strong>Al Aire:</strong> La Hora del Regreso (2:00 PM – 6:00 PM)</span>
+                <span class="text-blush-400">✦</span>
+                <span class="flex items-center gap-2"><i class="ph-fill ph-sparkle text-peri-500"></i> Periodismo Digital &amp; Community Management</span>
+                <span class="text-blush-400">✦</span>
+                <span class="flex items-center gap-2"><i class="ph-fill ph-microphone-stage text-rose-400"></i> W Radio &amp; Caracol Radio</span>
+                <span class="text-blush-400">✦</span>
+                <span class="flex items-center gap-2"><i class="ph-fill ph-globe-hemisphere-west text-peri-500"></i> Cobertura Nacional e Internacional</span>
+                <span class="text-blush-400">✦</span>
+            </div>
         </div>
     </div>
 
-    <nav class="sticky top-0 w-full z-50 bg-white/95 backdrop-blur-md border-b border-gray-100 shadow-sm">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Airy Navigation -->
+    <header class="sticky top-0 z-50 bg-white/88 backdrop-blur-xl border-b border-blush-100">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-20">
-                <div class="flex items-center">
-                    <img src="andrea_novoa_logo.png" alt="Logo Camila Novoa" class="h-20 w-auto object-contain">
-                </div>
-                
-                <div class="hidden md:block">
-                    <div class="ml-10 flex items-baseline space-x-1">
-                        <a href="#inicio" class="hover:text-brand-accent transition px-3 py-2 rounded-full text-sm font-semibold text-gray-600">Inicio</a>
-                        <a href="#prensa" class="hover:text-brand-accent transition px-3 py-2 rounded-full text-sm font-semibold text-gray-600">Prensa W</a>
-                        <a href="#audios" class="hover:text-brand-accent transition px-3 py-2 rounded-full text-sm font-semibold text-gray-600">Al Aire</a>
-                        <a href="#multimedia" class="hover:text-brand-accent transition px-3 py-2 rounded-full text-sm font-semibold text-gray-600">Multimedia</a>
-                        <a href="#galeria" class="hover:text-brand-accent transition px-3 py-2 rounded-full text-sm font-semibold text-gray-600">Galería</a>
-                        <a href="#educacion" class="hover:text-brand-accent transition px-3 py-2 rounded-full text-sm font-semibold text-gray-600">Formación</a>
-                        <a href="#contacto" class="bg-brand-accent hover:bg-brand-light text-white px-6 py-2.5 rounded-full transition text-sm font-bold shadow-lg shadow-orange-200/50 ml-4">Contacto</a>
-                    </div>
-                </div>
+                <a href="#inicio" class="flex items-center gap-2.5 group">
+                    <img src="andrea_novoa_logo.png" alt="Logo Camila Andrea Novoa" class="h-14 w-auto object-contain transition group-hover:opacity-85">
+                </a>
 
-                <div class="-mr-2 flex md:hidden">
-                    <button onclick="toggleMenu()" class="text-gray-500 hover:text-brand-accent p-2">
-                        <i class="ph ph-list text-2xl"></i>
-                    </button>
-                </div>
+                <nav class="hidden lg:flex items-center gap-1" aria-label="Navegación principal">
+                    <a href="#inicio" class="px-3.5 py-2 rounded-full text-sm font-medium text-muted hover:text-ink hover:bg-blush-50 transition">Inicio</a>
+                    <a href="#sobre-mi" class="px-3.5 py-2 rounded-full text-sm font-medium text-muted hover:text-ink hover:bg-blush-50 transition">Sobre Mí</a>
+                    <a href="#prensa" class="px-3.5 py-2 rounded-full text-sm font-medium text-muted hover:text-ink hover:bg-blush-50 transition">Portafolio</a>
+                    <a href="#cobertura" class="px-3.5 py-2 rounded-full text-sm font-medium text-muted hover:text-ink hover:bg-blush-50 transition">Redes</a>
+                    <a href="#audios" class="px-3.5 py-2 rounded-full text-sm font-medium text-muted hover:text-ink hover:bg-blush-50 transition">Al Aire</a>
+                    <a href="#multimedia" class="px-3.5 py-2 rounded-full text-sm font-medium text-muted hover:text-ink hover:bg-blush-50 transition">Reels</a>
+                    <a href="#galeria" class="px-3.5 py-2 rounded-full text-sm font-medium text-muted hover:text-ink hover:bg-blush-50 transition">Galería</a>
+                    <a href="#contacto" class="ml-3 bg-peri-500 hover:bg-peri-600 text-white px-5 py-2.5 rounded-full text-sm font-semibold transition shadow-pill">
+                        Contacto
+                    </a>
+                </nav>
+
+                <button id="menu-toggle" onclick="toggleMenu()" aria-label="Abrir menú" aria-expanded="false" class="lg:hidden inline-flex items-center justify-center w-11 h-11 rounded-full bg-blush-50 text-ink hover:bg-blush-100 transition">
+                    <i id="menu-icon" class="ph ph-list text-xl"></i>
+                </button>
             </div>
         </div>
-        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-gray-100 absolute w-full z-40">
-            <div class="px-4 pt-2 pb-6 space-y-2">
-                <a href="#inicio" class="block px-3 py-3 rounded-xl font-semibold text-gray-600 hover:bg-orange-50 hover:text-brand-accent">Inicio</a>
-                <a href="#prensa" class="block px-3 py-3 rounded-xl font-semibold text-gray-600 hover:bg-orange-50 hover:text-brand-accent">Prensa</a>
-                <a href="#audios" class="block px-3 py-3 rounded-xl font-semibold text-gray-600 hover:bg-orange-50 hover:text-brand-accent">Al Aire</a>
-                <a href="#galeria" class="block px-3 py-3 rounded-xl font-semibold text-gray-600 hover:bg-orange-50 hover:text-brand-accent">Galería</a>
-                <a href="#contacto" class="block px-3 py-3 mt-4 rounded-xl font-bold text-center bg-brand-accent text-white">Contactar</a>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-white border-b border-blush-100 shadow-lg">
+            <div class="max-w-6xl mx-auto px-4 py-4 grid grid-cols-2 gap-2">
+                <a href="#inicio" onclick="closeMenu()" class="px-4 py-3 rounded-2xl text-sm font-semibold text-ink hover:bg-blush-50">Inicio</a>
+                <a href="#sobre-mi" onclick="closeMenu()" class="px-4 py-3 rounded-2xl text-sm font-semibold text-ink hover:bg-blush-50">Sobre Mí</a>
+                <a href="#prensa" onclick="closeMenu()" class="px-4 py-3 rounded-2xl text-sm font-semibold text-ink hover:bg-blush-50">Portafolio</a>
+                <a href="#cobertura" onclick="closeMenu()" class="px-4 py-3 rounded-2xl text-sm font-semibold text-ink hover:bg-blush-50">Redes</a>
+                <a href="#audios" onclick="closeMenu()" class="px-4 py-3 rounded-2xl text-sm font-semibold text-ink hover:bg-blush-50">Al Aire</a>
+                <a href="#multimedia" onclick="closeMenu()" class="px-4 py-3 rounded-2xl text-sm font-semibold text-ink hover:bg-blush-50">Reels</a>
+                <a href="#galeria" onclick="closeMenu()" class="px-4 py-3 rounded-2xl text-sm font-semibold text-ink hover:bg-blush-50">Galería</a>
+                <a href="#contacto" onclick="closeMenu()" class="px-4 py-3 rounded-2xl text-sm font-bold text-center bg-peri-500 text-white">Contacto</a>
             </div>
         </div>
-    </nav>
+    </header>
 
-    <section id="inicio" class="relative pt-32 pb-20 lg:pt-40 lg:pb-32 overflow-hidden bg-white">
-        <div class="blob bg-orange-200 w-96 h-96 rounded-full top-0 left-0 -translate-x-1/2 -translate-y-1/2 opacity-30"></div>
-        <div class="blob bg-amber-100 w-80 h-80 rounded-full bottom-0 right-0 translate-x-1/3 translate-y-1/3 opacity-30"></div>
+    <!-- Hero Section (Arch Portrait + Clean Typography + Blush Stats) -->
+    <section id="inicio" class="relative overflow-hidden bg-gradient-to-b from-white via-white to-blush-50/50 pt-8 pb-20 lg:pt-12 lg:pb-24">
+        <div class="absolute top-12 right-0 w-72 h-72 bg-peri-100/60 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute bottom-0 left-0 w-72 h-72 bg-blush-100/70 rounded-full blur-3xl pointer-events-none"></div>
 
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 animate-fade-in-up">
-            <div class="grid lg:grid-cols-2 gap-12 items-center">
-                <div>
-                    <span class="inline-block py-1 px-3 rounded-full bg-orange-100 text-brand-accent text-sm font-bold mb-6 tracking-wide uppercase border border-orange-200">
-                        Comunicadora Social & Periodista
-                    </span>
-                    <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight text-gray-900 mb-6 leading-[1.1]">
-                        Camila Andrea <br>
-                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-accent to-orange-500">Novoa Ramírez</span>
-                    </h1>
-                    <p class="text-xl text-gray-500 mb-8 leading-relaxed max-w-lg">
-                        Periodismo digital, redacción de noticias y producción multimedia. Conectando audiencias con historias reales, estratégicas y humanas.
-                    </p>
-                    <div class="flex flex-wrap gap-4">
-                        <a href="#prensa" class="bg-brand-accent hover:bg-brand-light text-white px-8 py-4 rounded-full font-bold transition shadow-xl shadow-orange-200/50 flex items-center gap-2">
-                            <i class="ph-fill ph-newspaper text-xl"></i> Ver Notas W Radio
-                        </a>
-                        <div class="flex items-center gap-3 px-4">
-                            <a href="https://www.linkedin.com/in/camila-andrea-novoa-ram%C3%ADrez-66521b208/" target="_blank" class="text-gray-400 hover:text-brand-accent transition text-2xl"><i class="ph-fill ph-linkedin-logo"></i></a>
-                            <a href="https://www.instagram.com/andynov0oa/" target="_blank" class="text-gray-400 hover:text-brand-accent transition text-2xl"><i class="ph-fill ph-instagram-logo"></i></a>
-                            <a href="https://www.youtube.com/channel/UCKAL0EDPntD8evzPsGykpbg" target="_blank" class="text-gray-400 hover:text-brand-accent transition text-2xl"><i class="ph-fill ph-youtube-logo"></i></a>
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid lg:grid-cols-12 gap-12 lg:gap-12 items-center">
+                <!-- Left: Iconic Blush Arch Portrait -->
+                <div class="lg:col-span-5">
+                    <div class="relative max-w-sm mx-auto lg:max-w-none">
+                        <!-- Subtle decorative dots -->
+                        <div class="hidden sm:block absolute -left-5 bottom-12 w-14 h-14 rounded-full bg-peri-100/90 -z-10"></div>
+                        <div class="hidden sm:block absolute -right-4 top-10 w-10 h-10 rounded-full bg-blush-200/80 -z-10"></div>
+
+                        <!-- Bottom-rounded blush arch frame like reference -->
+                        <div class="bg-blush-200/85 p-3 pb-3 rounded-t-[2.5rem] rounded-b-[11rem] shadow-blush">
+                            <div class="overflow-hidden rounded-t-[2rem] rounded-b-[10.5rem] aspect-[4/5] bg-blush-100">
+                                <img src="perfil.jpeg"
+                                     alt="Camila Andrea Novoa Ramírez"
+                                     class="w-full h-full object-cover object-center scale-110">
+                            </div>
+                        </div>
+
+                        <!-- Cute floating status badge -->
+                        <div class="absolute -bottom-3 right-3 sm:right-6 bg-white/95 backdrop-blur-md px-4 py-2.5 rounded-full shadow-soft border border-blush-100 flex items-center gap-2">
+                            <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
+                            <span class="text-xs font-bold text-ink">W Radio · Caracol Radio</span>
                         </div>
                     </div>
                 </div>
-                <div class="relative">
-                    <div class="relative rounded-3xl overflow-hidden shadow-2xl shadow-gray-200 border-[6px] border-white transform rotate-2 hover:rotate-0 transition duration-500">
-                        <img src="profile - pic.jpg" 
-                             alt="Camila Novoa Periodista" 
-                             class="w-full h-[750px] object-cover bg-gray-200">
+
+                <!-- Right: Editorial Creative Intro -->
+                <div class="lg:col-span-7 text-center lg:text-left">
+                    <p class="text-peri-500 font-semibold text-sm tracking-wide mb-3">
+                        Camila Andrea Novoa Ramírez
+                    </p>
+
+                    <h1 class="font-serif text-4xl sm:text-5xl lg:text-[3.5rem] font-bold text-ink leading-[1.12] tracking-tight mb-6">
+                        Periodista &amp; Creadora Digital en <span class="wave-word">Bogotá</span>
+                    </h1>
+
+                    <p class="text-muted text-base sm:text-lg leading-relaxed max-w-xl mx-auto lg:mx-0 mb-8">
+                        Comunicadora Social y Periodista apasionada por contar historias reales que conectan con las audiencias. Combino la redacción informativa y la radio en vivo con el dinamismo de las redes sociales y el contenido multimedia.
+                    </p>
+
+                    <div class="flex flex-wrap items-center justify-center lg:justify-start gap-3.5 mb-8">
+                        <a href="#prensa" class="bg-peri-500 hover:bg-peri-600 text-white px-8 py-3.5 rounded-full font-semibold text-sm transition shadow-pill inline-flex items-center gap-2">
+                            <span>Ver Mi Portafolio</span>
+                            <i class="ph-bold ph-arrow-right"></i>
+                        </a>
+                        <a href="CV Andrea Novoa 2026.pdf" download class="bg-blush-50 hover:bg-blush-100 text-ink border border-blush-200 px-6 py-3.5 rounded-full font-semibold text-sm transition inline-flex items-center gap-2">
+                            <i class="ph-bold ph-download-simple text-peri-500"></i>
+                            <span>Hoja de Vida</span>
+                        </a>
                     </div>
+
+                    <!-- Social Pills -->
+                    <div class="flex items-center justify-center lg:justify-start gap-2.5">
+                        <a href="https://www.linkedin.com/in/camila-andrea-novoa-ram%C3%ADrez-66521b208/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="w-10 h-10 rounded-full bg-peri-50 hover:bg-peri-500 text-peri-500 hover:text-white flex items-center justify-center transition">
+                            <i class="ph-fill ph-linkedin-logo text-lg"></i>
+                        </a>
+                        <a href="https://www.instagram.com/andynov0oa/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="w-10 h-10 rounded-full bg-blush-100 hover:bg-rose-400 text-rose-500 hover:text-white flex items-center justify-center transition">
+                            <i class="ph-fill ph-instagram-logo text-lg"></i>
+                        </a>
+                        <a href="https://www.youtube.com/channel/UCKAL0EDPntD8evzPsGykpbg" target="_blank" rel="noopener noreferrer" aria-label="YouTube" class="w-10 h-10 rounded-full bg-blush-100 hover:bg-rose-500 text-rose-500 hover:text-white flex items-center justify-center transition">
+                            <i class="ph-fill ph-youtube-logo text-lg"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pastel Pink Numbers Stats Row (Signature Detail from Reference!) -->
+            <div class="mt-16 pt-10 border-t border-blush-100 grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8 reveal">
+                <div class="flex items-center justify-center gap-3.5">
+                    <span class="font-serif text-4xl sm:text-5xl font-bold text-blush-300">24</span>
+                    <span class="text-xs sm:text-sm font-medium text-muted leading-tight">Notas<br>Publicadas</span>
+                </div>
+                <div class="flex items-center justify-center gap-3.5">
+                    <span class="font-serif text-4xl sm:text-5xl font-bold text-blush-300">17</span>
+                    <span class="text-xs sm:text-sm font-medium text-muted leading-tight">Coberturas<br>en Redes</span>
+                </div>
+                <div class="flex items-center justify-center gap-3.5">
+                    <span class="font-serif text-4xl sm:text-5xl font-bold text-blush-300">10</span>
+                    <span class="text-xs sm:text-sm font-medium text-muted leading-tight">Audios<br>Al Aire</span>
+                </div>
+                <div class="flex items-center justify-center gap-3.5">
+                    <span class="font-serif text-4xl sm:text-5xl font-bold text-blush-300">13</span>
+                    <span class="text-xs sm:text-sm font-medium text-muted leading-tight">Videos &amp;<br>Reels</span>
                 </div>
             </div>
         </div>
     </section>
 
-    <div class="w-full relative z-20 shadow-lg">
-        <img src="Banner.jpg" alt="Banner Andrea Novoa" class="w-full h-auto object-cover">
-    </div>
-
-    <section id="sobre-mi" class="py-20 bg-gray-50 border-t border-gray-200">
-        <div class="max-w-6xl mx-auto px-4">
-            <div class="grid md:grid-cols-2 gap-12 items-center">
-                <div class="order-2 md:order-1 relative rounded-2xl overflow-hidden shadow-lg rotate-1 hover:rotate-0 transition">
-                    <img src="pic (1).jpeg" alt="En cabina de radio" class="w-full h-auto object-cover">
+    <!-- Sobre Mí & "Lo Que Siempre Aporto" (Soft Blush Band inspired by reference) -->
+    <section id="sobre-mi" class="py-20 lg:py-24 bg-blush-50/80 border-y border-blush-100">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Banner Framed Cleanly -->
+            <div class="mb-16 reveal">
+                <div class="rounded-[2rem] overflow-hidden shadow-soft border-4 border-white bg-white">
+                    <img src="Banner.jpg" alt="Banner Camila Andrea Novoa" class="w-full h-auto object-cover">
                 </div>
-                
-                <div class="order-1 md:order-2 text-center md:text-left">
-                    <h2 class="text-3xl font-extrabold mb-6 text-gray-900">Perfil Profesional</h2>
-                    <p class="text-lg text-gray-600 leading-relaxed mb-8">
-                        Comunicadora Social–Periodista en formación con sólida experiencia en <strong>W Radio Colombia</strong>. Me especializo en la investigación, redacción de noticias y producción de contenidos digitales. Mi enfoque combina la inmediatez del periodismo radial con la precisión de la redacción web.
+            </div>
+
+            <div class="grid lg:grid-cols-12 gap-12 items-center reveal">
+                <div class="lg:col-span-5">
+                    <div class="bg-peri-100/80 p-3 rounded-[2rem] shadow-soft">
+                        <div class="rounded-[1.5rem] overflow-hidden bg-white">
+                            <img src="pic (1).jpeg" alt="Andrea Novoa en cabina de radio" class="w-full h-auto object-cover">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-7">
+                    <h2 class="font-serif text-3xl sm:text-4xl font-bold text-ink mb-4">
+                        Cuatro pilares en mi <span class="wave-word">trabajo</span>
+                    </h2>
+                    <p class="text-muted text-base leading-relaxed mb-8">
+                        Comunicadora Social–Periodista en formación con experiencia en <strong class="text-ink">W Radio Colombia</strong> y <strong class="text-ink">Caracol Radio</strong>. Mi enfoque une la inmediatez del periodismo radial con estrategias digitales frescas, cercanas y claras.
                     </p>
-                    <a href="#contacto" class="text-brand-accent font-bold hover:underline flex items-center gap-2 justify-center md:justify-start">
-                      <a href="CV Andrea Novoa 2026.pdf" 
-   download
-   class="text-brand-accent font-bold hover:underline flex items-center gap-2 justify-center md:justify-start">
-   
-   Descargar Hoja de Vida
-</a>
+
+                    <div class="grid sm:grid-cols-2 gap-6 mb-8">
+                        <div class="bg-white p-5 rounded-3xl border border-blush-100 shadow-sm">
+                            <div class="flex items-center gap-2.5 mb-2">
+                                <span class="w-9 h-9 rounded-2xl bg-blush-100 text-rose-500 flex items-center justify-center text-lg"><i class="ph-fill ph-newspaper-clipping"></i></span>
+                                <h3 class="font-bold text-sm text-ink">Redacción &amp; SEO</h3>
+                            </div>
+                            <p class="text-xs text-muted leading-relaxed">Notas web, crónicas y guiones pensados para informar con precisión y posicionar en buscadores.</p>
+                        </div>
+
+                        <div class="bg-white p-5 rounded-3xl border border-blush-100 shadow-sm">
+                            <div class="flex items-center gap-2.5 mb-2">
+                                <span class="w-9 h-9 rounded-2xl bg-peri-100 text-peri-500 flex items-center justify-center text-lg"><i class="ph-fill ph-chats-circle"></i></span>
+                                <h3 class="font-bold text-sm text-ink">Cobertura &amp; Comunidad</h3>
+                            </div>
+                            <p class="text-xs text-muted leading-relaxed">Minuto a minuto en X, reels informativos y contenido ágil que mantiene activa a la audiencia.</p>
+                        </div>
+
+                        <div class="bg-white p-5 rounded-3xl border border-blush-100 shadow-sm">
+                            <div class="flex items-center gap-2.5 mb-2">
+                                <span class="w-9 h-9 rounded-2xl bg-peri-100 text-peri-500 flex items-center justify-center text-lg"><i class="ph-fill ph-microphone-stage"></i></span>
+                                <h3 class="font-bold text-sm text-ink">Radio &amp; Entrevistas</h3>
+                            </div>
+                            <p class="text-xs text-muted leading-relaxed">Locución, especiales internacionales, manejo de consola y edición en Adobe Audition.</p>
+                        </div>
+
+                        <div class="bg-white p-5 rounded-3xl border border-blush-100 shadow-sm">
+                            <div class="flex items-center gap-2.5 mb-2">
+                                <span class="w-9 h-9 rounded-2xl bg-blush-100 text-rose-500 flex items-center justify-center text-lg"><i class="ph-fill ph-film-strip"></i></span>
+                                <h3 class="font-bold text-sm text-ink">Video &amp; Storytelling</h3>
+                            </div>
+                            <p class="text-xs text-muted leading-relaxed">Cápsulas verticales, edición dinámica en CapCut y Premiere, y presentación frente a cámara.</p>
+                        </div>
+                    </div>
+
+                    <a href="CV Andrea Novoa 2026.pdf" download class="inline-flex items-center gap-2 bg-peri-500 hover:bg-peri-600 text-white px-7 py-3 rounded-full text-sm font-semibold transition shadow-pill">
+                        <i class="ph-bold ph-file-pdf text-base"></i>
+                        <span>Descargar Hoja de Vida (PDF)</span>
                     </a>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Mi Portafolio: Prensa & Redacción -->
     <section id="prensa" class="py-24 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <span class="text-brand-accent font-bold uppercase tracking-wider text-sm flex justify-center items-center gap-2">
-                    <i class="ph-fill ph-radio"></i> W Radio Colombia
-                </span>
-                <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 mt-2">Redacción & Periodismo</h2>
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-12 reveal">
+                <span class="text-xs font-bold uppercase tracking-[0.18em] text-peri-500 block mb-2">W Radio &amp; Caracol Radio</span>
+                <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-ink mb-4">
+                    Mi <span class="wave-word">Portafolio</span> de Prensa
+                </h2>
+                <p class="text-muted text-sm sm:text-base">
+                    Crónicas, entrevistas y artículos publicados en medios nacionales e internacionales.
+                </p>
             </div>
 
-            <div class="mb-16">
-                <article class="bg-brand-dark rounded-3xl overflow-hidden shadow-2xl flex flex-col md:flex-row relative group hover:-translate-y-1 transition duration-300">
-                    <div class="absolute top-6 left-6 bg-brand-accent text-white text-xs font-bold px-4 py-2 rounded-full z-10 uppercase tracking-wider">Entrevista Destacada</div>
-                    <div class="md:w-3/5 p-8 md:p-16 flex flex-col justify-center relative z-10">
-                        <h3 class="text-3xl md:text-4xl font-extrabold text-white mb-6 leading-tight">"El secreto es tener amor a lo que haces": Samuel Araque</h3>
-                        <p class="text-orange-100 text-lg mb-8 leading-relaxed">Crónica sobre el niño pastelero de 14 años que inspira al país con su emprendimiento y pasión.</p>
-                        <a href="https://www.wradio.com.co/2025/11/29/el-secreto-es-tener-amor-y-carino-a-lo-que-haces-samuel-araque-el-nino-pastelero-de-14-anos/" target="_blank" class="inline-block bg-brand-accent text-white px-8 py-4 rounded-full font-bold hover:bg-brand-light transition self-start shadow-lg">
-                            Leer Nota Completa
-                        </a>
-                    </div>
-                    <div class="md:w-2/5 h-80 md:h-auto bg-gray-800 relative">
-                        <img src="niño.jpg" alt="Niño Pastelero" class="w-full h-full object-cover opacity-50 group-hover:opacity-70 transition duration-500 grayscale group-hover:grayscale-0">
-                    </div>
-                </article>
-            </div>
-
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <article class="p-6 border rounded-2xl hover:border-brand-accent transition group hover:shadow-lg">
-                    <span class="text-xs font-bold text-gray-400 mb-2 block uppercase">Orden Público</span>
-                    <h3 class="font-bold text-lg mb-2 group-hover:text-brand-accent">Ejército anunció dos nuevos batallones de ingenieros</h3>
-                    <a href="https://www.wradio.com.co/2025/10/10/ejercito-anuncio-dos-nuevos-batallones-de-ingenieros-para-seguridad-y-ferrovias/?rel=buscador_noticias" target="_blank" class="text-sm font-bold text-gray-600 flex items-center gap-1 mt-auto">Leer más <i class="ph-bold ph-arrow-right"></i></a>
-                </article>
-                <article class="p-6 border rounded-2xl hover:border-brand-accent transition group hover:shadow-lg">
-                    <span class="text-xs font-bold text-gray-400 mb-2 block uppercase">MinMinas</span>
-                    <h3 class="font-bold text-lg mb-2 group-hover:text-brand-accent">MinMinas respondió a abucheos de distribuidores</h3>
-                    <a href="https://www.wradio.com.co/2025/11/10/minminas-respondio-a-abucheos-de-distribuidores-de-combustibles/" target="_blank" class="text-sm font-bold text-gray-600 flex items-center gap-1 mt-auto">Leer más <i class="ph-bold ph-arrow-right"></i></a>
-                </article>
-                <article class="p-6 border rounded-2xl hover:border-brand-accent transition group hover:shadow-lg">
-                    <span class="text-xs font-bold text-gray-400 mb-2 block uppercase">Regiones</span>
-                    <h3 class="font-bold text-lg mb-2 group-hover:text-brand-accent">Gobernación de Arauca rechazó atentado terrorista</h3>
-                    <a href="https://www.wradio.com.co/2025/10/06/gobernacion-de-arauca-rechazo-atentado-terrorista-en-puerto-jordan/?rel=buscador_noticias" target="_blank" class="text-sm font-bold text-gray-600 flex items-center gap-1 mt-auto">Leer más <i class="ph-bold ph-arrow-right"></i></a>
-                </article>
-                <article class="p-6 border rounded-2xl hover:border-brand-accent transition group hover:shadow-lg">
-                    <span class="text-xs font-bold text-gray-400 mb-2 block uppercase">Bogotá</span>
-                    <h3 class="font-bold text-lg mb-2 group-hover:text-brand-accent">Capturan a joven tras robo de licor</h3>
-                    <a href="https://www.wradio.com.co/2025/10/03/capturan-a-joven-en-bogota-tras-robar-licor-por-mas-de-un-millon-de-pesos-en-supermercado/?rel=buscador_noticias" target="_blank" class="text-sm font-bold text-gray-600 flex items-center gap-1 mt-auto">Leer más <i class="ph-bold ph-arrow-right"></i></a>
-                </article>
-                <article class="p-6 border rounded-2xl hover:border-brand-accent transition group hover:shadow-lg">
-                    <span class="text-xs font-bold text-gray-400 mb-2 block uppercase">Denuncia</span>
-                    <h3 class="font-bold text-lg mb-2 group-hover:text-brand-accent">Contraloría detecta irregularidades en el IDU</h3>
-                    <a href="https://www.wradio.com.co/2025/09/22/contraloria-de-bogota-detecta-irregularidades-por-151-mil-millones-en-el-idu-por-gestion-inconclusa/?rel=buscador_noticias" target="_blank" class="text-sm font-bold text-gray-600 flex items-center gap-1 mt-auto">Leer más <i class="ph-bold ph-arrow-right"></i></a>
-                </article>
-                <article class="p-6 border rounded-2xl hover:border-brand-accent transition group hover:shadow-lg">
-                    <span class="text-xs font-bold text-gray-400 mb-2 block uppercase">Servicio</span>
-                    <h3 class="font-bold text-lg mb-2 group-hover:text-brand-accent">Vence plazo para pagar impuesto predial</h3>
-                    <a href="https://www.wradio.com.co/2025/09/26/vence-el-plazo-para-pagar-la-tercera-cuota-del-impuesto-predial-este-3-de-octubre/?rel=buscador_noticias" target="_blank" class="text-sm font-bold text-gray-600 flex items-center gap-1 mt-auto">Leer más <i class="ph-bold ph-arrow-right"></i></a>
-                </article>
-                <article class="p-6 border rounded-2xl hover:border-brand-accent transition group hover:shadow-lg">
-                    <span class="text-xs font-bold text-gray-400 mb-2 block uppercase">Judicial</span>
-                    <h3 class="font-bold text-lg mb-2 group-hover:text-brand-accent">Capturan a alias 'Toca' extraditable</h3>
-                    <a href="https://www.wradio.com.co/2025/09/26/capturan-en-bogota-a-alias-toca-extraditable-por-trafico-de-cocaina-en-biodiesel/?rel=buscador_noticias" target="_blank" class="text-sm font-bold text-gray-600 flex items-center gap-1 mt-auto">Leer más <i class="ph-bold ph-arrow-right"></i></a>
-                </article>
-                <article class="p-6 border rounded-2xl hover:border-brand-accent transition group hover:shadow-lg">
-                    <span class="text-xs font-bold text-gray-400 mb-2 block uppercase">Movilidad</span>
-                    <h3 class="font-bold text-lg mb-2 group-hover:text-brand-accent">Corredores humanitarios Vía al Llano</h3>
-                    <a href="https://www.wradio.com.co/2025/10/01/se-habilitan-corredores-humanitarios-en-la-via-al-llano-para-trasladar-pacientes-criticos/?rel=buscador_noticias" target="_blank" class="text-sm font-bold text-gray-600 flex items-center gap-1 mt-auto">Leer más <i class="ph-bold ph-arrow-right"></i></a>
-                </article>
-                <article class="p-6 border rounded-2xl hover:border-brand-accent transition group hover:shadow-lg">
-                    <span class="text-xs font-bold text-gray-400 mb-2 block uppercase">Seguridad</span>
-                    <h3 class="font-bold text-lg mb-2 group-hover:text-brand-accent">Cae la banda del BMW</h3>
-                    <a href="https://www.wradio.com.co/2025/10/01/capturan-en-bogota-a-la-banda-del-bmw-implicada-en-varios-robos-de-vehiculos/?rel=buscador_noticias" target="_blank" class="text-sm font-bold text-gray-600 flex items-center gap-1 mt-auto">Leer más <i class="ph-bold ph-arrow-right"></i></a>
-                </article>
-                 <article class="p-6 border rounded-2xl hover:border-brand-accent transition group hover:shadow-lg">
-                    <span class="text-xs font-bold text-gray-400 mb-2 block uppercase">Internacional</span>
-                    <h3 class="font-bold text-lg mb-2 group-hover:text-brand-accent">Llegó Qatar Airways a Colombia</h3>
-                    <a href="https://caracol.com.co/2026/05/11/llego-qatar-airways-a-colombia-la-aerolinea-del-golfo-anuncia-vuelos-directos-a-bogota/" target="_blank" class="text-sm font-bold text-gray-600 flex items-center gap-1 mt-auto">Leer más <i class="ph-bold ph-arrow-right"></i></a>
-                </article>
-                  <article class="p-6 border rounded-2xl hover:border-brand-accent transition group hover:shadow-lg">
-                    <span class="text-xs font-bold text-gray-400 mb-2 block uppercase">Entrevista</span>
-                    <h3 class="font-bold text-lg mb-2 group-hover:text-brand-accent">Ramón Sánchez, dirigente político</h3>
-                    <a href="https://caracol.com.co/2026/05/15/el-cubano-esta-agobiado-desnutrido-y-abandonado-por-el-regimen-ramon-sanchez-dirigente-politico/" target="_blank" class="text-sm font-bold text-gray-600 flex items-center gap-1 mt-auto">Leer más <i class="ph-bold ph-arrow-right"></i></a>
-                </article>
-                 </article>
-                  <article class="p-6 border rounded-2xl hover:border-brand-accent transition group hover:shadow-lg">
-                    <span class="text-xs font-bold text-gray-400 mb-2 block uppercase">Internacional</span>
-                    <h3 class="font-bold text-lg mb-2 group-hover:text-brand-accent">CIDH interviene por joven colombiano</h3>
-                    <a href="https://caracol.com.co/2026/05/27/cidh-interviene-por-joven-colombiano-que-lleva-mas-de-50-dias-esperando-cirugia-urgente/" target="_blank" class="text-sm font-bold text-gray-600 flex items-center gap-1 mt-auto">Leer más <i class="ph-bold ph-arrow-right"></i></a>
-                </article>
-                  </article>
-                  <article class="p-6 border rounded-2xl hover:border-brand-accent transition group hover:shadow-lg">
-                    <span class="text-xs font-bold text-gray-400 mb-2 block uppercase">Internacional</span>
-                    <h3 class="font-bold text-lg mb-2 group-hover:text-brand-accent">Presidente Erdogan llama “tirano” a Netanyahu</h3>
-                    <a href="https://caracol.com.co/2026/05/27/presidente-erdogan-llama-tirano-a-netanyahu-en-medio-de-presiones-de-trump-para-mediar-con-israel/" target="_blank" class="text-sm font-bold text-gray-600 flex items-center gap-1 mt-auto">Leer más <i class="ph-bold ph-arrow-right"></i></a>
-                </article>
-
-                  </article>
-                  <article class="p-6 border rounded-2xl hover:border-brand-accent transition group hover:shadow-lg">
-                    <span class="text-xs font-bold text-gray-400 mb-2 block uppercase">Entretenimiento</span>
-                    <h3 class="font-bold text-lg mb-2 group-hover:text-brand-accent">Director de Train to Busan presenta “Colony”</h3>
-                    <a href="https://caracol.com.co/2026/05/25/director-de-train-to-busan-presenta-colony-su-nuevo-filme-en-cannes/?outputType=amp" target="_blank" class="text-sm font-bold text-gray-600 flex items-center gap-1 mt-auto">Leer más <i class="ph-bold ph-arrow-right"></i></a>
-                </article>
-
-                </article>
-                  <article class="p-6 border rounded-2xl hover:border-brand-accent transition group hover:shadow-lg">
-                    <span class="text-xs font-bold text-gray-400 mb-2 block uppercase">Internacional</span>
-                    <h3 class="font-bold text-lg mb-2 group-hover:text-brand-accent">EE. UU. ordena frenar investigaciones </h3>
-                    <a href="https://caracol.com.co/2026/05/28/ee-uu-ordena-frenar-investigaciones-contra-delcy-rodriguez-en-medio-de-giro-con-venezuela/?outputType=amp" target="_blank" class="text-sm font-bold text-gray-600 flex items-center gap-1 mt-auto">Leer más <i class="ph-bold ph-arrow-right"></i></a>
-                </article>
-
-                 </article>
-                  <article class="p-6 border rounded-2xl hover:border-brand-accent transition group hover:shadow-lg">
-                    <span class="text-xs font-bold text-gray-400 mb-2 block uppercase">Internacional</span>
-                    <h3 class="font-bold text-lg mb-2 group-hover:text-brand-accent">Un colombiano está entre víctimas de ICE</h3>
-                    <a href="https://caracol.com.co/2026/05/27/un-colombiano-esta-entre-victimas-de-alarmante-ola-de-suicidios-en-centros-de-detencion-de-ice/" target="_blank" class="text-sm font-bold text-gray-600 flex items-center gap-1 mt-auto">Leer más <i class="ph-bold ph-arrow-right"></i></a>
-                </article>
-            </div>
-        </div>
-    </section>
-
-    <section class="py-16 bg-gray-50 border-t border-gray-200">
-        <div class="max-w-7xl mx-auto px-4">
-            <h2 class="text-2xl font-bold text-center mb-10 flex items-center justify-center gap-2">
-                <i class="ph-fill ph-share-network"></i> Cobertura Digital & Pasantías
-            </h2>
-            <div class="grid md:grid-cols-4 gap-6">
-                <div class="bg-gradient-to-br from-purple-600 to-pink-500 p-1 rounded-2xl shadow-lg transform hover:-translate-y-1 transition cursor-pointer">
-                    <div class="bg-white p-6 rounded-xl h-full flex flex-col">
-                        <div class="flex items-center gap-2 mb-3 text-pink-600">
-                            <i class="ph-fill ph-instagram-logo text-2xl"></i>
-                            <span class="font-bold text-sm">Pasantía</span>
+            <!-- Featured Story (Soft Periwinkle & Blush Showcase Card) -->
+            <div class="mb-12 reveal">
+                <article class="bg-gradient-to-br from-peri-50 via-white to-blush-50 rounded-[2rem] p-3 sm:p-4 border border-peri-100 shadow-soft">
+                    <div class="grid lg:grid-cols-12 gap-6 items-center">
+                        <div class="lg:col-span-7 p-5 sm:p-8">
+                            <div class="flex flex-wrap items-center gap-2.5 mb-4">
+                                <span class="bg-blush-200/80 text-ink text-xs font-bold px-3.5 py-1 rounded-full">Entrevista Destacada</span>
+                                <span class="text-peri-500 text-xs font-bold">W Radio · Crónica</span>
+                            </div>
+                            <h3 class="font-serif text-2xl sm:text-3xl lg:text-4xl font-bold text-ink leading-snug mb-4">
+                                “El secreto es tener amor a lo que haces”: Samuel Araque
+                            </h3>
+                            <p class="text-muted text-sm sm:text-base leading-relaxed mb-7">
+                                Crónica sobre el niño pastelero de 14 años que inspira al país con su emprendimiento, disciplina y pasión.
+                            </p>
+                            <a href="https://www.wradio.com.co/2025/11/29/el-secreto-es-tener-amor-y-carino-a-lo-que-haces-samuel-araque-el-nino-pastelero-de-14-anos/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-peri-500 hover:bg-peri-600 text-white px-7 py-3 rounded-full text-sm font-semibold transition shadow-pill">
+                                <span>Leer nota completa</span>
+                                <i class="ph-bold ph-arrow-up-right"></i>
+                            </a>
                         </div>
-                        <p class="text-gray-700 text-sm mb-4">Reel destacado: Experiencia y cubrimiento en pasantía universitaria.</p>
-                        <a href="https://www.instagram.com/reel/CiJUcPDAopB/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" target="_blank" class="mt-auto block text-center bg-pink-50 text-pink-600 py-2 rounded-lg font-bold hover:bg-pink-100 transition">Ver Reel</a>
+                        <div class="lg:col-span-5">
+                            <div class="rounded-[1.5rem] overflow-hidden border-4 border-peri-200/70 aspect-[4/3] lg:aspect-[5/4] bg-white">
+                                <img src="niño.jpg" alt="Samuel Araque, niño pastelero" class="w-full h-full object-cover hover:scale-105 transition duration-500">
+                            </div>
+                        </div>
                     </div>
+                </article>
+            </div>
+
+            <!-- Interactive Filter Pills -->
+            <div class="flex flex-wrap items-center justify-center gap-2 mb-10 reveal" role="group" aria-label="Filtrar artículos">
+                <button type="button" onclick="filterPress('all', this)" aria-pressed="true" class="filter-pill px-4 py-2 rounded-full text-xs font-bold border border-blush-200 bg-blush-50 text-ink hover:border-peri-500 transition">
+                    Todas (23)
+                </button>
+                <button type="button" onclick="filterPress('caracol', this)" aria-pressed="false" class="filter-pill px-4 py-2 rounded-full text-xs font-bold border border-blush-200 bg-blush-50 text-ink hover:border-peri-500 transition">
+                    Caracol Radio (14)
+                </button>
+                <button type="button" onclick="filterPress('wradio', this)" aria-pressed="false" class="filter-pill px-4 py-2 rounded-full text-xs font-bold border border-blush-200 bg-blush-50 text-ink hover:border-peri-500 transition">
+                    W Radio (9)
+                </button>
+                <button type="button" onclick="filterPress('internacional', this)" aria-pressed="false" class="filter-pill px-4 py-2 rounded-full text-xs font-bold border border-blush-200 bg-blush-50 text-ink hover:border-peri-500 transition">
+                    Internacional
+                </button>
+                <button type="button" onclick="filterPress('nacional', this)" aria-pressed="false" class="filter-pill px-4 py-2 rounded-full text-xs font-bold border border-blush-200 bg-blush-50 text-ink hover:border-peri-500 transition">
+                    Colombia &amp; Bogotá
+                </button>
+                <button type="button" onclick="filterPress('tech', this)" aria-pressed="false" class="filter-pill px-4 py-2 rounded-full text-xs font-bold border border-blush-200 bg-blush-50 text-ink hover:border-peri-500 transition">
+                    Tecnología &amp; Cultura
+                </button>
+            </div>
+
+            <!-- All 23 Press Cards -->
+            <div id="press-grid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 reveal">
+                <article data-tags="caracol internacional" class="press-card bg-white p-6 rounded-3xl border border-blush-100 hover:border-peri-300 shadow-sm hover:shadow-soft hover:-translate-y-1 transition flex flex-col justify-between group">
+                    <div>
+                        <div class="flex items-center justify-between gap-2 mb-3">
+                            <span class="text-[11px] font-bold px-3 py-1 rounded-full bg-blush-100 text-rose-600">Internacional</span>
+                            <span class="text-[11px] font-semibold text-muted">Caracol Radio</span>
+                        </div>
+                        <h3 class="font-bold text-base text-ink leading-snug mb-5 group-hover:text-peri-600 transition">EE. UU. respalda el regreso de la fumigación aérea de coca en Colombia</h3>
+                    </div>
+                    <a href="https://caracol.com.co/2026/11/20/estados-unidos-respalda-el-regreso-de-la-fumigacion-aerea-de-coca-en-colombia/" target="_blank" rel="noopener noreferrer" class="text-xs font-bold text-peri-500 inline-flex items-center gap-1.5 pt-3 border-t border-blush-50">
+                        Leer nota <i class="ph-bold ph-arrow-up-right"></i>
+                    </a>
+                </article>
+
+                <article data-tags="caracol internacional" class="press-card bg-white p-6 rounded-3xl border border-blush-100 hover:border-peri-300 shadow-sm hover:shadow-soft hover:-translate-y-1 transition flex flex-col justify-between group">
+                    <div>
+                        <div class="flex items-center justify-between gap-2 mb-3">
+                            <span class="text-[11px] font-bold px-3 py-1 rounded-full bg-blush-100 text-rose-600">Internacional</span>
+                            <span class="text-[11px] font-semibold text-muted">Caracol Radio</span>
+                        </div>
+                        <h3 class="font-bold text-base text-ink leading-snug mb-5 group-hover:text-peri-600 transition">Colombiano murió en ataque armado durante una fiesta en Ecuador</h3>
+                    </div>
+                    <a href="https://caracol.com.co/2026/11/17/un-colombiano-murio-en-ataque-armado-durante-una-fiesta-de-cumpleanos-en-ecuador/" target="_blank" rel="noopener noreferrer" class="text-xs font-bold text-peri-500 inline-flex items-center gap-1.5 pt-3 border-t border-blush-50">
+                        Leer nota <i class="ph-bold ph-arrow-up-right"></i>
+                    </a>
+                </article>
+
+                <article data-tags="caracol internacional" class="press-card bg-white p-6 rounded-3xl border border-blush-100 hover:border-peri-300 shadow-sm hover:shadow-soft hover:-translate-y-1 transition flex flex-col justify-between group">
+                    <div>
+                        <div class="flex items-center justify-between gap-2 mb-3">
+                            <span class="text-[11px] font-bold px-3 py-1 rounded-full bg-blush-100 text-rose-600">Internacional</span>
+                            <span class="text-[11px] font-semibold text-muted">Caracol Radio</span>
+                        </div>
+                        <h3 class="font-bold text-base text-ink leading-snug mb-5 group-hover:text-peri-600 transition">Rusia condiciona inclusión de la UE en negociaciones de paz</h3>
+                    </div>
+                    <a href="https://caracol.com.co/2026/11/13/rusia-condiciona-inclusion-de-la-ue-en-negociaciones-de-paz/" target="_blank" rel="noopener noreferrer" class="text-xs font-bold text-peri-500 inline-flex items-center gap-1.5 pt-3 border-t border-blush-50">
+                        Leer nota <i class="ph-bold ph-arrow-up-right"></i>
+                    </a>
+                </article>
+
+                <article data-tags="caracol tech" class="press-card bg-white p-6 rounded-3xl border border-blush-100 hover:border-peri-300 shadow-sm hover:shadow-soft hover:-translate-y-1 transition flex flex-col justify-between group">
+                    <div>
+                        <div class="flex items-center justify-between gap-2 mb-3">
+                            <span class="text-[11px] font-bold px-3 py-1 rounded-full bg-peri-100 text-peri-600">Tecnología</span>
+                            <span class="text-[11px] font-semibold text-muted">Caracol Radio</span>
+                        </div>
+                        <h3 class="font-bold text-base text-ink leading-snug mb-5 group-hover:text-peri-600 transition">Nvidia: Kimberly Powell, señalada como segunda amante de Jensen Huang</h3>
+                    </div>
+                    <a href="https://caracol.com.co/2026/11/12/nvidia-kimberly-powell-la-ejecutiva-senalada-como-la-segunda-amante-de-jensen-huang/" target="_blank" rel="noopener noreferrer" class="text-xs font-bold text-peri-500 inline-flex items-center gap-1.5 pt-3 border-t border-blush-50">
+                        Leer nota <i class="ph-bold ph-arrow-up-right"></i>
+                    </a>
+                </article>
+
+                <article data-tags="caracol internacional" class="press-card bg-white p-6 rounded-3xl border border-blush-100 hover:border-peri-300 shadow-sm hover:shadow-soft hover:-translate-y-1 transition flex flex-col justify-between group">
+                    <div>
+                        <div class="flex items-center justify-between gap-2 mb-3">
+                            <span class="text-[11px] font-bold px-3 py-1 rounded-full bg-blush-100 text-rose-600">Internacional</span>
+                            <span class="text-[11px] font-semibold text-muted">Caracol Radio</span>
+                        </div>
+                        <h3 class="font-bold text-base text-ink leading-snug mb-5 group-hover:text-peri-600 transition">Agente de ICE que asesinó a colombiano en Maine expresó odio contra inmigrantes</h3>
+                    </div>
+                    <a href="https://caracol.com.co/2026/11/12/agente-de-ice-que-asesino-a-colombiano-en-maine-expreso-odio-contra-inmigrantes/" target="_blank" rel="noopener noreferrer" class="text-xs font-bold text-peri-500 inline-flex items-center gap-1.5 pt-3 border-t border-blush-50">
+                        Leer nota <i class="ph-bold ph-arrow-up-right"></i>
+                    </a>
+                </article>
+
+                <article data-tags="caracol tech" class="press-card bg-white p-6 rounded-3xl border border-blush-100 hover:border-peri-300 shadow-sm hover:shadow-soft hover:-translate-y-1 transition flex flex-col justify-between group">
+                    <div>
+                        <div class="flex items-center justify-between gap-2 mb-3">
+                            <span class="text-[11px] font-bold px-3 py-1 rounded-full bg-peri-100 text-peri-600">Tecnología</span>
+                            <span class="text-[11px] font-semibold text-muted">Caracol Radio</span>
+                        </div>
+                        <h3 class="font-bold text-base text-ink leading-snug mb-5 group-hover:text-peri-600 transition">XPeng planea lanzar sus carros voladores a gran escala en China en 2027</h3>
+                    </div>
+                    <a href="https://caracol.com.co/2026/11/11/xpeng-planea-lanzar-sus-carros-voladores-a-gran-escala-en-china-durante-2027/" target="_blank" rel="noopener noreferrer" class="text-xs font-bold text-peri-500 inline-flex items-center gap-1.5 pt-3 border-t border-blush-50">
+                        Leer nota <i class="ph-bold ph-arrow-up-right"></i>
+                    </a>
+                </article>
+
+                <article data-tags="caracol internacional" class="press-card bg-white p-6 rounded-3xl border border-blush-100 hover:border-peri-300 shadow-sm hover:shadow-soft hover:-translate-y-1 transition flex flex-col justify-between group">
+                    <div>
+                        <div class="flex items-center justify-between gap-2 mb-3">
+                            <span class="text-[11px] font-bold px-3 py-1 rounded-full bg-blush-100 text-rose-600">Internacional</span>
+                            <span class="text-[11px] font-semibold text-muted">Caracol Radio</span>
+                        </div>
+                        <h3 class="font-bold text-base text-ink leading-snug mb-5 group-hover:text-peri-600 transition">Arabia Saudita condenó a 100 latigazos a mujer keniana por tener un hijo fuera del matrimonio</h3>
+                    </div>
+                    <a href="https://caracol.com.co/2026/11/11/arabia-saudita-condeno-a-100-latigazos-a-una-mujer-keniana-por-tener-un-hijo-fuera-del-matrimonio/" target="_blank" rel="noopener noreferrer" class="text-xs font-bold text-peri-500 inline-flex items-center gap-1.5 pt-3 border-t border-blush-50">
+                        Leer nota <i class="ph-bold ph-arrow-up-right"></i>
+                    </a>
+                </article>
+
+                <article data-tags="caracol internacional" class="press-card bg-white p-6 rounded-3xl border border-blush-100 hover:border-peri-300 shadow-sm hover:shadow-soft hover:-translate-y-1 transition flex flex-col justify-between group">
+                    <div>
+                        <div class="flex items-center justify-between gap-2 mb-3">
+                            <span class="text-[11px] font-bold px-3 py-1 rounded-full bg-blush-100 text-rose-600">Internacional</span>
+                            <span class="text-[11px] font-semibold text-muted">Caracol Radio</span>
+                        </div>
+                        <h3 class="font-bold text-base text-ink leading-snug mb-5 group-hover:text-peri-600 transition">EE. UU. ordena frenar investigaciones contra Delcy Rodríguez</h3>
+                    </div>
+                    <a href="https://caracol.com.co/2026/05/28/ee-uu-ordena-frenar-investigaciones-contra-delcy-rodriguez-en-medio-de-giro-con-venezuela/?outputType=amp" target="_blank" rel="noopener noreferrer" class="text-xs font-bold text-peri-500 inline-flex items-center gap-1.5 pt-3 border-t border-blush-50">
+                        Leer nota <i class="ph-bold ph-arrow-up-right"></i>
+                    </a>
+                </article>
+
+                <article data-tags="caracol internacional" class="press-card bg-white p-6 rounded-3xl border border-blush-100 hover:border-peri-300 shadow-sm hover:shadow-soft hover:-translate-y-1 transition flex flex-col justify-between group">
+                    <div>
+                        <div class="flex items-center justify-between gap-2 mb-3">
+                            <span class="text-[11px] font-bold px-3 py-1 rounded-full bg-blush-100 text-rose-600">Internacional</span>
+                            <span class="text-[11px] font-semibold text-muted">Caracol Radio</span>
+                        </div>
+                        <h3 class="font-bold text-base text-ink leading-snug mb-5 group-hover:text-peri-600 transition">Un colombiano está entre víctimas de ICE</h3>
+                    </div>
+                    <a href="https://caracol.com.co/2026/05/27/un-colombiano-esta-entre-victimas-de-alarmante-ola-de-suicidios-en-centros-de-detencion-de-ice/" target="_blank" rel="noopener noreferrer" class="text-xs font-bold text-peri-500 inline-flex items-center gap-1.5 pt-3 border-t border-blush-50">
+                        Leer nota <i class="ph-bold ph-arrow-up-right"></i>
+                    </a>
+                </article>
+
+                <article data-tags="caracol internacional" class="press-card bg-white p-6 rounded-3xl border border-blush-100 hover:border-peri-300 shadow-sm hover:shadow-soft hover:-translate-y-1 transition flex flex-col justify-between group">
+                    <div>
+                        <div class="flex items-center justify-between gap-2 mb-3">
+                            <span class="text-[11px] font-bold px-3 py-1 rounded-full bg-blush-100 text-rose-600">Internacional</span>
+                            <span class="text-[11px] font-semibold text-muted">Caracol Radio</span>
+                        </div>
+                        <h3 class="font-bold text-base text-ink leading-snug mb-5 group-hover:text-peri-600 transition">CIDH interviene por joven colombiano</h3>
+                    </div>
+                    <a href="https://caracol.com.co/2026/05/27/cidh-interviene-por-joven-colombiano-que-lleva-mas-de-50-dias-esperando-cirugia-urgente/" target="_blank" rel="noopener noreferrer" class="text-xs font-bold text-peri-500 inline-flex items-center gap-1.5 pt-3 border-t border-blush-50">
+                        Leer nota <i class="ph-bold ph-arrow-up-right"></i>
+                    </a>
+                </article>
+
+                <article data-tags="caracol internacional" class="press-card bg-white p-6 rounded-3xl border border-blush-100 hover:border-peri-300 shadow-sm hover:shadow-soft hover:-translate-y-1 transition flex flex-col justify-between group">
+                    <div>
+                        <div class="flex items-center justify-between gap-2 mb-3">
+                            <span class="text-[11px] font-bold px-3 py-1 rounded-full bg-blush-100 text-rose-600">Internacional</span>
+                            <span class="text-[11px] font-semibold text-muted">Caracol Radio</span>
+                        </div>
+                        <h3 class="font-bold text-base text-ink leading-snug mb-5 group-hover:text-peri-600 transition">Presidente Erdogan llama “tirano” a Netanyahu</h3>
+                    </div>
+                    <a href="https://caracol.com.co/2026/05/27/presidente-erdogan-llama-tirano-a-netanyahu-en-medio-de-presiones-de-trump-para-mediar-con-israel/" target="_blank" rel="noopener noreferrer" class="text-xs font-bold text-peri-500 inline-flex items-center gap-1.5 pt-3 border-t border-blush-50">
+                        Leer nota <i class="ph-bold ph-arrow-up-right"></i>
+                    </a>
+                </article>
+
+                <article data-tags="caracol tech" class="press-card bg-white p-6 rounded-3xl border border-blush-100 hover:border-peri-300 shadow-sm hover:shadow-soft hover:-translate-y-1 transition flex flex-col justify-between group">
+                    <div>
+                        <div class="flex items-center justify-between gap-2 mb-3">
+                            <span class="text-[11px] font-bold px-3 py-1 rounded-full bg-peri-100 text-peri-600">Entretenimiento</span>
+                            <span class="text-[11px] font-semibold text-muted">Caracol Radio</span>
+                        </div>
+                        <h3 class="font-bold text-base text-ink leading-snug mb-5 group-hover:text-peri-600 transition">Director de Train to Busan presenta “Colony” en Cannes</h3>
+                    </div>
+                    <a href="https://caracol.com.co/2026/05/25/director-de-train-to-busan-presenta-colony-su-nuevo-filme-en-cannes/?outputType=amp" target="_blank" rel="noopener noreferrer" class="text-xs font-bold text-peri-500 inline-flex items-center gap-1.5 pt-3 border-t border-blush-50">
+                        Leer nota <i class="ph-bold ph-arrow-up-right"></i>
+                    </a>
+                </article>
+
+                <article data-tags="caracol internacional" class="press-card bg-white p-6 rounded-3xl border border-blush-100 hover:border-peri-300 shadow-sm hover:shadow-soft hover:-translate-y-1 transition flex flex-col justify-between group">
+                    <div>
+                        <div class="flex items-center justify-between gap-2 mb-3">
+                            <span class="text-[11px] font-bold px-3 py-1 rounded-full bg-blush-100 text-rose-600">Entrevista</span>
+                            <span class="text-[11px] font-semibold text-muted">Caracol Radio</span>
+                        </div>
+                        <h3 class="font-bold text-base text-ink leading-snug mb-5 group-hover:text-peri-600 transition">Ramón Sánchez, dirigente político</h3>
+                    </div>
+                    <a href="https://caracol.com.co/2026/05/15/el-cubano-esta-agobiado-desnutrido-y-abandonado-por-el-regimen-ramon-sanchez-dirigente-politico/" target="_blank" rel="noopener noreferrer" class="text-xs font-bold text-peri-500 inline-flex items-center gap-1.5 pt-3 border-t border-blush-50">
+                        Leer nota <i class="ph-bold ph-arrow-up-right"></i>
+                    </a>
+                </article>
+
+                <article data-tags="caracol internacional" class="press-card bg-white p-6 rounded-3xl border border-blush-100 hover:border-peri-300 shadow-sm hover:shadow-soft hover:-translate-y-1 transition flex flex-col justify-between group">
+                    <div>
+                        <div class="flex items-center justify-between gap-2 mb-3">
+                            <span class="text-[11px] font-bold px-3 py-1 rounded-full bg-blush-100 text-rose-600">Internacional</span>
+                            <span class="text-[11px] font-semibold text-muted">Caracol Radio</span>
+                        </div>
+                        <h3 class="font-bold text-base text-ink leading-snug mb-5 group-hover:text-peri-600 transition">Llegó Qatar Airways a Colombia</h3>
+                    </div>
+                    <a href="https://caracol.com.co/2026/05/11/llego-qatar-airways-a-colombia-la-aerolinea-del-golfo-anuncia-vuelos-directos-a-bogota/" target="_blank" rel="noopener noreferrer" class="text-xs font-bold text-peri-500 inline-flex items-center gap-1.5 pt-3 border-t border-blush-50">
+                        Leer nota <i class="ph-bold ph-arrow-up-right"></i>
+                    </a>
+                </article>
+
+                <!-- W Radio -->
+                <article data-tags="wradio nacional" class="press-card bg-white p-6 rounded-3xl border border-blush-100 hover:border-peri-300 shadow-sm hover:shadow-soft hover:-translate-y-1 transition flex flex-col justify-between group">
+                    <div>
+                        <div class="flex items-center justify-between gap-2 mb-3">
+                            <span class="text-[11px] font-bold px-3 py-1 rounded-full bg-peri-50 text-ink">MinMinas</span>
+                            <span class="text-[11px] font-semibold text-muted">W Radio</span>
+                        </div>
+                        <h3 class="font-bold text-base text-ink leading-snug mb-5 group-hover:text-peri-600 transition">MinMinas respondió a abucheos de distribuidores</h3>
+                    </div>
+                    <a href="https://www.wradio.com.co/2025/11/10/minminas-respondio-a-abucheos-de-distribuidores-de-combustibles/" target="_blank" rel="noopener noreferrer" class="text-xs font-bold text-peri-500 inline-flex items-center gap-1.5 pt-3 border-t border-blush-50">
+                        Leer nota <i class="ph-bold ph-arrow-up-right"></i>
+                    </a>
+                </article>
+
+                <article data-tags="wradio nacional" class="press-card bg-white p-6 rounded-3xl border border-blush-100 hover:border-peri-300 shadow-sm hover:shadow-soft hover:-translate-y-1 transition flex flex-col justify-between group">
+                    <div>
+                        <div class="flex items-center justify-between gap-2 mb-3">
+                            <span class="text-[11px] font-bold px-3 py-1 rounded-full bg-peri-50 text-ink">Orden Público</span>
+                            <span class="text-[11px] font-semibold text-muted">W Radio</span>
+                        </div>
+                        <h3 class="font-bold text-base text-ink leading-snug mb-5 group-hover:text-peri-600 transition">Ejército anunció dos nuevos batallones de ingenieros</h3>
+                    </div>
+                    <a href="https://www.wradio.com.co/2025/10/10/ejercito-anuncio-dos-nuevos-batallones-de-ingenieros-para-seguridad-y-ferrovias/?rel=buscador_noticias" target="_blank" rel="noopener noreferrer" class="text-xs font-bold text-peri-500 inline-flex items-center gap-1.5 pt-3 border-t border-blush-50">
+                        Leer nota <i class="ph-bold ph-arrow-up-right"></i>
+                    </a>
+                </article>
+
+                <article data-tags="wradio nacional" class="press-card bg-white p-6 rounded-3xl border border-blush-100 hover:border-peri-300 shadow-sm hover:shadow-soft hover:-translate-y-1 transition flex flex-col justify-between group">
+                    <div>
+                        <div class="flex items-center justify-between gap-2 mb-3">
+                            <span class="text-[11px] font-bold px-3 py-1 rounded-full bg-peri-50 text-ink">Regiones</span>
+                            <span class="text-[11px] font-semibold text-muted">W Radio</span>
+                        </div>
+                        <h3 class="font-bold text-base text-ink leading-snug mb-5 group-hover:text-peri-600 transition">Gobernación de Arauca rechazó atentado terrorista</h3>
+                    </div>
+                    <a href="https://www.wradio.com.co/2025/10/06/gobernacion-de-arauca-rechazo-atentado-terrorista-en-puerto-jordan/?rel=buscador_noticias" target="_blank" rel="noopener noreferrer" class="text-xs font-bold text-peri-500 inline-flex items-center gap-1.5 pt-3 border-t border-blush-50">
+                        Leer nota <i class="ph-bold ph-arrow-up-right"></i>
+                    </a>
+                </article>
+
+                <article data-tags="wradio nacional" class="press-card bg-white p-6 rounded-3xl border border-blush-100 hover:border-peri-300 shadow-sm hover:shadow-soft hover:-translate-y-1 transition flex flex-col justify-between group">
+                    <div>
+                        <div class="flex items-center justify-between gap-2 mb-3">
+                            <span class="text-[11px] font-bold px-3 py-1 rounded-full bg-peri-50 text-ink">Bogotá</span>
+                            <span class="text-[11px] font-semibold text-muted">W Radio</span>
+                        </div>
+                        <h3 class="font-bold text-base text-ink leading-snug mb-5 group-hover:text-peri-600 transition">Capturan a joven tras robo de licor</h3>
+                    </div>
+                    <a href="https://www.wradio.com.co/2025/10/03/capturan-a-joven-en-bogota-tras-robar-licor-por-mas-de-un-millon-de-pesos-en-supermercado/?rel=buscador_noticias" target="_blank" rel="noopener noreferrer" class="text-xs font-bold text-peri-500 inline-flex items-center gap-1.5 pt-3 border-t border-blush-50">
+                        Leer nota <i class="ph-bold ph-arrow-up-right"></i>
+                    </a>
+                </article>
+
+                <article data-tags="wradio nacional" class="press-card bg-white p-6 rounded-3xl border border-blush-100 hover:border-peri-300 shadow-sm hover:shadow-soft hover:-translate-y-1 transition flex flex-col justify-between group">
+                    <div>
+                        <div class="flex items-center justify-between gap-2 mb-3">
+                            <span class="text-[11px] font-bold px-3 py-1 rounded-full bg-peri-50 text-ink">Movilidad</span>
+                            <span class="text-[11px] font-semibold text-muted">W Radio</span>
+                        </div>
+                        <h3 class="font-bold text-base text-ink leading-snug mb-5 group-hover:text-peri-600 transition">Corredores humanitarios Vía al Llano</h3>
+                    </div>
+                    <a href="https://www.wradio.com.co/2025/10/01/se-habilitan-corredores-humanitarios-en-la-via-al-llano-para-trasladar-pacientes-criticos/?rel=buscador_noticias" target="_blank" rel="noopener noreferrer" class="text-xs font-bold text-peri-500 inline-flex items-center gap-1.5 pt-3 border-t border-blush-50">
+                        Leer nota <i class="ph-bold ph-arrow-up-right"></i>
+                    </a>
+                </article>
+
+                <article data-tags="wradio nacional" class="press-card bg-white p-6 rounded-3xl border border-blush-100 hover:border-peri-300 shadow-sm hover:shadow-soft hover:-translate-y-1 transition flex flex-col justify-between group">
+                    <div>
+                        <div class="flex items-center justify-between gap-2 mb-3">
+                            <span class="text-[11px] font-bold px-3 py-1 rounded-full bg-peri-50 text-ink">Seguridad</span>
+                            <span class="text-[11px] font-semibold text-muted">W Radio</span>
+                        </div>
+                        <h3 class="font-bold text-base text-ink leading-snug mb-5 group-hover:text-peri-600 transition">Cae la banda del BMW</h3>
+                    </div>
+                    <a href="https://www.wradio.com.co/2025/10/01/capturan-en-bogota-a-la-banda-del-bmw-implicada-en-varios-robos-de-vehiculos/?rel=buscador_noticias" target="_blank" rel="noopener noreferrer" class="text-xs font-bold text-peri-500 inline-flex items-center gap-1.5 pt-3 border-t border-blush-50">
+                        Leer nota <i class="ph-bold ph-arrow-up-right"></i>
+                    </a>
+                </article>
+
+                <article data-tags="wradio nacional" class="press-card bg-white p-6 rounded-3xl border border-blush-100 hover:border-peri-300 shadow-sm hover:shadow-soft hover:-translate-y-1 transition flex flex-col justify-between group">
+                    <div>
+                        <div class="flex items-center justify-between gap-2 mb-3">
+                            <span class="text-[11px] font-bold px-3 py-1 rounded-full bg-peri-50 text-ink">Judicial</span>
+                            <span class="text-[11px] font-semibold text-muted">W Radio</span>
+                        </div>
+                        <h3 class="font-bold text-base text-ink leading-snug mb-5 group-hover:text-peri-600 transition">Capturan a alias 'Toca' extraditable</h3>
+                    </div>
+                    <a href="https://www.wradio.com.co/2025/09/26/capturan-en-bogota-a-alias-toca-extraditable-por-trafico-de-cocaina-en-biodiesel/?rel=buscador_noticias" target="_blank" rel="noopener noreferrer" class="text-xs font-bold text-peri-500 inline-flex items-center gap-1.5 pt-3 border-t border-blush-50">
+                        Leer nota <i class="ph-bold ph-arrow-up-right"></i>
+                    </a>
+                </article>
+
+                <article data-tags="wradio nacional" class="press-card bg-white p-6 rounded-3xl border border-blush-100 hover:border-peri-300 shadow-sm hover:shadow-soft hover:-translate-y-1 transition flex flex-col justify-between group">
+                    <div>
+                        <div class="flex items-center justify-between gap-2 mb-3">
+                            <span class="text-[11px] font-bold px-3 py-1 rounded-full bg-peri-50 text-ink">Servicio</span>
+                            <span class="text-[11px] font-semibold text-muted">W Radio</span>
+                        </div>
+                        <h3 class="font-bold text-base text-ink leading-snug mb-5 group-hover:text-peri-600 transition">Vence plazo para pagar impuesto predial</h3>
+                    </div>
+                    <a href="https://www.wradio.com.co/2025/09/26/vence-el-plazo-para-pagar-la-tercera-cuota-del-impuesto-predial-este-3-de-octubre/?rel=buscador_noticias" target="_blank" rel="noopener noreferrer" class="text-xs font-bold text-peri-500 inline-flex items-center gap-1.5 pt-3 border-t border-blush-50">
+                        Leer nota <i class="ph-bold ph-arrow-up-right"></i>
+                    </a>
+                </article>
+
+                <article data-tags="wradio nacional" class="press-card bg-white p-6 rounded-3xl border border-blush-100 hover:border-peri-300 shadow-sm hover:shadow-soft hover:-translate-y-1 transition flex flex-col justify-between group">
+                    <div>
+                        <div class="flex items-center justify-between gap-2 mb-3">
+                            <span class="text-[11px] font-bold px-3 py-1 rounded-full bg-peri-50 text-ink">Denuncia</span>
+                            <span class="text-[11px] font-semibold text-muted">W Radio</span>
+                        </div>
+                        <h3 class="font-bold text-base text-ink leading-snug mb-5 group-hover:text-peri-600 transition">Contraloría detecta irregularidades en el IDU</h3>
+                    </div>
+                    <a href="https://www.wradio.com.co/2025/09/22/contraloria-de-bogota-detecta-irregularidades-por-151-mil-millones-en-el-idu-por-gestion-inconclusa/?rel=buscador_noticias" target="_blank" rel="noopener noreferrer" class="text-xs font-bold text-peri-500 inline-flex items-center gap-1.5 pt-3 border-t border-blush-50">
+                        Leer nota <i class="ph-bold ph-arrow-up-right"></i>
+                    </a>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cobertura Digital & Community -->
+    <section id="cobertura" class="py-24 bg-blush-50/80 border-t border-blush-100">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-10 reveal">
+                <span class="text-xs font-bold uppercase tracking-[0.18em] text-peri-500 block mb-2">Social Media &amp; Tiempo Real</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-ink mb-4">
+                    Cobertura <span class="wave-word wave-pink">Digital</span> &amp; Pasantías
+                </h2>
+                <div class="flex flex-wrap items-center justify-center gap-2 mt-6" role="group" aria-label="Filtrar redes">
+                    <button type="button" onclick="filterSocial('all', this)" aria-pressed="true" class="filter-pill px-4 py-2 rounded-full text-xs font-bold border border-blush-200 bg-white text-ink hover:border-peri-500 transition">
+                        Todos (17)
+                    </button>
+                    <button type="button" onclick="filterSocial('ultimahora', this)" aria-pressed="false" class="filter-pill px-4 py-2 rounded-full text-xs font-bold border border-blush-200 bg-white text-ink hover:border-peri-500 transition">
+                        @UltimaHoraCR (13)
+                    </button>
+                    <button type="button" onclick="filterSocial('wradio', this)" aria-pressed="false" class="filter-pill px-4 py-2 rounded-full text-xs font-bold border border-blush-200 bg-white text-ink hover:border-peri-500 transition">
+                        @WRadioColombia (3)
+                    </button>
                 </div>
+            </div>
 
-                <a href="https://x.com/WRadioColombia/status/1971610982272336287?s=20" target="_blank" class="block bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition group border border-gray-100">
-                    <div class="flex items-center gap-2 mb-3">
-                        <span class="font-bold text-sm">@WRadioColombia</span>
-                        <i class="ph-fill ph-seal-check text-blue-500"></i>
+            <div id="social-grid" class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 reveal">
+                <a data-social="pasantia" href="https://www.instagram.com/reel/CiJUcPDAopB/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" target="_blank" rel="noopener noreferrer" class="social-card bg-gradient-to-br from-blush-100 via-white to-peri-50 p-5 rounded-3xl border border-blush-200 hover:shadow-blush hover:-translate-y-0.5 transition flex flex-col justify-between group">
+                    <div>
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="inline-flex items-center gap-1.5 text-rose-500 font-bold text-xs">
+                                <i class="ph-fill ph-instagram-logo text-lg"></i> Pasantía
+                            </span>
+                            <i class="ph-bold ph-arrow-up-right text-rose-400"></i>
+                        </div>
+                        <p class="text-ink font-medium text-sm leading-relaxed mb-4">Reel destacado: Experiencia y cubrimiento en pasantía universitaria.</p>
                     </div>
-                    <p class="text-gray-700 text-sm">Cobertura en vivo: Información de último minuto.</p>
-                    <span class="text-brand-accent text-xs font-bold mt-4 block group-hover:underline">Ver Post &rarr;</span>
-                </a>
-                <a href="https://x.com/WRadioColombia/status/1971616352084644325?s=20" target="_blank" class="block bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition group border border-gray-100">
-                    <div class="flex items-center gap-2 mb-3">
-                        <span class="font-bold text-sm">@WRadioColombia</span>
-                        <i class="ph-fill ph-seal-check text-blue-500"></i>
-                    </div>
-                    <p class="text-gray-700 text-sm">Seguimiento a la noticia y reacciones oficiales.</p>
-                    <span class="text-brand-accent text-xs font-bold mt-4 block group-hover:underline">Ver Post &rarr;</span>
-                </a>
-                <a href="https://x.com/WRadioColombia/status/1970934274544247158?s=20" target="_blank" class="block bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition group border border-gray-100">
-                    <div class="flex items-center gap-2 mb-3">
-                        <span class="font-bold text-sm">@WRadioColombia</span>
-                        <i class="ph-fill ph-seal-check text-blue-500"></i>
-                    </div>
-                    <p class="text-gray-700 text-sm">Reporte especial desde el lugar de la noticia.</p>
-                    <span class="text-brand-accent text-xs font-bold mt-4 block group-hover:underline">Ver Post &rarr;</span>
+                    <span class="text-xs font-bold text-rose-500 group-hover:underline">Ver Reel &rarr;</span>
                 </a>
 
- <a href="https://x.com/UltimaHoraCR/status/2060321912098615380?s=20" target="_blank" class="block bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition group border border-gray-100">
-                    <div class="flex items-center gap-2 mb-3">
-                        <span class="font-bold text-sm">@UltimaHoraCR</span>
-                        <i class="ph-fill ph-seal-check text-blue-500"></i>
+                <a data-social="wradio" href="https://x.com/WRadioColombia/status/1971610982272336287?s=20" target="_blank" rel="noopener noreferrer" class="social-card bg-white p-5 rounded-3xl border border-blush-100 hover:border-peri-300 hover:shadow-soft hover:-translate-y-0.5 transition flex flex-col justify-between group">
+                    <div>
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="inline-flex items-center gap-1.5 font-bold text-xs text-ink">@WRadioColombia <i class="ph-fill ph-seal-check text-peri-500"></i></span>
+                            <i class="ph-fill ph-x-logo text-muted group-hover:text-ink transition"></i>
+                        </div>
+                        <p class="text-muted text-sm leading-relaxed mb-4">Cobertura en vivo: Información de último minuto.</p>
                     </div>
-                    <p class="text-gray-700 text-sm">Cobertura en vivo: Información de último minuto..</p>
-                    <span class="text-brand-accent text-xs font-bold mt-4 block group-hover:underline">Ver Post &rarr;</span>
+                    <span class="text-peri-500 text-xs font-bold group-hover:underline">Ver Post &rarr;</span>
                 </a>
 
-                 <a href="https://x.com/UltimaHoraCR/status/2053875014009541092?s=20" target="_blank" class="block bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition group border border-gray-100">
-                    <div class="flex items-center gap-2 mb-3">
-                        <span class="font-bold text-sm">@UltimaHoraCR</span>
-                        <i class="ph-fill ph-seal-check text-blue-500"></i>
+                <a data-social="wradio" href="https://x.com/WRadioColombia/status/1971616352084644325?s=20" target="_blank" rel="noopener noreferrer" class="social-card bg-white p-5 rounded-3xl border border-blush-100 hover:border-peri-300 hover:shadow-soft hover:-translate-y-0.5 transition flex flex-col justify-between group">
+                    <div>
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="inline-flex items-center gap-1.5 font-bold text-xs text-ink">@WRadioColombia <i class="ph-fill ph-seal-check text-peri-500"></i></span>
+                            <i class="ph-fill ph-x-logo text-muted group-hover:text-ink transition"></i>
+                        </div>
+                        <p class="text-muted text-sm leading-relaxed mb-4">Seguimiento a la noticia y reacciones oficiales.</p>
                     </div>
-                    <p class="text-gray-700 text-sm">Cobertura en vivo: Información de último minuto..</p>
-                    <span class="text-brand-accent text-xs font-bold mt-4 block group-hover:underline">Ver Post &rarr;</span>
+                    <span class="text-peri-500 text-xs font-bold group-hover:underline">Ver Post &rarr;</span>
                 </a>
 
-                  <a href="https://x.com/UltimaHoraCR/status/2054537959148224927?s=20" target="_blank" class="block bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition group border border-gray-100">
-                    <div class="flex items-center gap-2 mb-3">
-                        <span class="font-bold text-sm">@UltimaHoraCR</span>
-                        <i class="ph-fill ph-seal-check text-blue-500"></i>
+                <a data-social="wradio" href="https://x.com/WRadioColombia/status/1970934274544247158?s=20" target="_blank" rel="noopener noreferrer" class="social-card bg-white p-5 rounded-3xl border border-blush-100 hover:border-peri-300 hover:shadow-soft hover:-translate-y-0.5 transition flex flex-col justify-between group">
+                    <div>
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="inline-flex items-center gap-1.5 font-bold text-xs text-ink">@WRadioColombia <i class="ph-fill ph-seal-check text-peri-500"></i></span>
+                            <i class="ph-fill ph-x-logo text-muted group-hover:text-ink transition"></i>
+                        </div>
+                        <p class="text-muted text-sm leading-relaxed mb-4">Reporte especial desde el lugar de la noticia.</p>
                     </div>
-                    <p class="text-gray-700 text-sm">Cobertura en vivo: Información de último minuto..</p>
-                    <span class="text-brand-accent text-xs font-bold mt-4 block group-hover:underline">Ver Post &rarr;</span>
+                    <span class="text-peri-500 text-xs font-bold group-hover:underline">Ver Post &rarr;</span>
                 </a>
 
-                  <a href="https://x.com/UltimaHoraCR/status/2057095675632898464?s=20" target="_blank" class="block bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition group border border-gray-100">
-                    <div class="flex items-center gap-2 mb-3">
-                        <span class="font-bold text-sm">@UltimaHoraCR</span>
-                        <i class="ph-fill ph-seal-check text-blue-500"></i>
+                <!-- 13 @UltimaHoraCR posts -->
+                <a data-social="ultimahora" href="https://x.com/UltimaHoraCR/status/2116905023158255704?s=20" target="_blank" rel="noopener noreferrer" class="social-card bg-white p-5 rounded-3xl border border-blush-100 hover:border-peri-300 hover:shadow-soft hover:-translate-y-0.5 transition flex flex-col justify-between group">
+                    <div>
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="inline-flex items-center gap-1.5 font-bold text-xs text-ink">@UltimaHoraCR <i class="ph-fill ph-seal-check text-peri-500"></i></span>
+                            <i class="ph-fill ph-x-logo text-muted group-hover:text-ink transition"></i>
+                        </div>
+                        <p class="text-muted text-sm leading-relaxed mb-4">Cobertura en vivo: Información de último minuto.</p>
                     </div>
-                    <p class="text-gray-700 text-sm">Cobertura en vivo: Información de último minuto..</p>
-                    <span class="text-brand-accent text-xs font-bold mt-4 block group-hover:underline">Ver Post &rarr;</span>
+                    <span class="text-peri-500 text-xs font-bold group-hover:underline">Ver Post &rarr;</span>
+                </a>
+
+                <a data-social="ultimahora" href="https://x.com/UltimaHoraCR/status/2116632637544509888?s=20" target="_blank" rel="noopener noreferrer" class="social-card bg-white p-5 rounded-3xl border border-blush-100 hover:border-peri-300 hover:shadow-soft hover:-translate-y-0.5 transition flex flex-col justify-between group">
+                    <div>
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="inline-flex items-center gap-1.5 font-bold text-xs text-ink">@UltimaHoraCR <i class="ph-fill ph-seal-check text-peri-500"></i></span>
+                            <i class="ph-fill ph-x-logo text-muted group-hover:text-ink transition"></i>
+                        </div>
+                        <p class="text-muted text-sm leading-relaxed mb-4">Cobertura en vivo: Información de último minuto.</p>
+                    </div>
+                    <span class="text-peri-500 text-xs font-bold group-hover:underline">Ver Post &rarr;</span>
+                </a>
+
+                <a data-social="ultimahora" href="https://x.com/UltimaHoraCR/status/2116184776772145332?s=20" target="_blank" rel="noopener noreferrer" class="social-card bg-white p-5 rounded-3xl border border-blush-100 hover:border-peri-300 hover:shadow-soft hover:-translate-y-0.5 transition flex flex-col justify-between group">
+                    <div>
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="inline-flex items-center gap-1.5 font-bold text-xs text-ink">@UltimaHoraCR <i class="ph-fill ph-seal-check text-peri-500"></i></span>
+                            <i class="ph-fill ph-x-logo text-muted group-hover:text-ink transition"></i>
+                        </div>
+                        <p class="text-muted text-sm leading-relaxed mb-4">Cobertura en vivo: Información de último minuto.</p>
+                    </div>
+                    <span class="text-peri-500 text-xs font-bold group-hover:underline">Ver Post &rarr;</span>
+                </a>
+
+                <a data-social="ultimahora" href="https://x.com/UltimaHoraCR/status/2116145114414231628?s=20" target="_blank" rel="noopener noreferrer" class="social-card bg-white p-5 rounded-3xl border border-blush-100 hover:border-peri-300 hover:shadow-soft hover:-translate-y-0.5 transition flex flex-col justify-between group">
+                    <div>
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="inline-flex items-center gap-1.5 font-bold text-xs text-ink">@UltimaHoraCR <i class="ph-fill ph-seal-check text-peri-500"></i></span>
+                            <i class="ph-fill ph-x-logo text-muted group-hover:text-ink transition"></i>
+                        </div>
+                        <p class="text-muted text-sm leading-relaxed mb-4">Cobertura en vivo: Información de último minuto.</p>
+                    </div>
+                    <span class="text-peri-500 text-xs font-bold group-hover:underline">Ver Post &rarr;</span>
+                </a>
+
+                <a data-social="ultimahora" href="https://x.com/UltimaHoraCR/status/2116137012969312670?s=20" target="_blank" rel="noopener noreferrer" class="social-card bg-white p-5 rounded-3xl border border-blush-100 hover:border-peri-300 hover:shadow-soft hover:-translate-y-0.5 transition flex flex-col justify-between group">
+                    <div>
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="inline-flex items-center gap-1.5 font-bold text-xs text-ink">@UltimaHoraCR <i class="ph-fill ph-seal-check text-peri-500"></i></span>
+                            <i class="ph-fill ph-x-logo text-muted group-hover:text-ink transition"></i>
+                        </div>
+                        <p class="text-muted text-sm leading-relaxed mb-4">Cobertura en vivo: Información de último minuto.</p>
+                    </div>
+                    <span class="text-peri-500 text-xs font-bold group-hover:underline">Ver Post &rarr;</span>
+                </a>
+
+                <a data-social="ultimahora" href="https://x.com/UltimaHoraCR/status/2089510547649634514?s=20" target="_blank" rel="noopener noreferrer" class="social-card bg-white p-5 rounded-3xl border border-blush-100 hover:border-peri-300 hover:shadow-soft hover:-translate-y-0.5 transition flex flex-col justify-between group">
+                    <div>
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="inline-flex items-center gap-1.5 font-bold text-xs text-ink">@UltimaHoraCR <i class="ph-fill ph-seal-check text-peri-500"></i></span>
+                            <i class="ph-fill ph-x-logo text-muted group-hover:text-ink transition"></i>
+                        </div>
+                        <p class="text-muted text-sm leading-relaxed mb-4">Cobertura en vivo: Información de último minuto.</p>
+                    </div>
+                    <span class="text-peri-500 text-xs font-bold group-hover:underline">Ver Post &rarr;</span>
+                </a>
+
+                <a data-social="ultimahora" href="https://x.com/UltimaHoraCR/status/2089080931071959498?s=20" target="_blank" rel="noopener noreferrer" class="social-card bg-white p-5 rounded-3xl border border-blush-100 hover:border-peri-300 hover:shadow-soft hover:-translate-y-0.5 transition flex flex-col justify-between group">
+                    <div>
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="inline-flex items-center gap-1.5 font-bold text-xs text-ink">@UltimaHoraCR <i class="ph-fill ph-seal-check text-peri-500"></i></span>
+                            <i class="ph-fill ph-x-logo text-muted group-hover:text-ink transition"></i>
+                        </div>
+                        <p class="text-muted text-sm leading-relaxed mb-4">Cobertura en vivo: Información de último minuto.</p>
+                    </div>
+                    <span class="text-peri-500 text-xs font-bold group-hover:underline">Ver Post &rarr;</span>
+                </a>
+
+                <a data-social="ultimahora" href="https://x.com/UltimaHoraCR/status/2085086272171933820?s=20" target="_blank" rel="noopener noreferrer" class="social-card bg-white p-5 rounded-3xl border border-blush-100 hover:border-peri-300 hover:shadow-soft hover:-translate-y-0.5 transition flex flex-col justify-between group">
+                    <div>
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="inline-flex items-center gap-1.5 font-bold text-xs text-ink">@UltimaHoraCR <i class="ph-fill ph-seal-check text-peri-500"></i></span>
+                            <i class="ph-fill ph-x-logo text-muted group-hover:text-ink transition"></i>
+                        </div>
+                        <p class="text-muted text-sm leading-relaxed mb-4">Cobertura en vivo: Información de último minuto.</p>
+                    </div>
+                    <span class="text-peri-500 text-xs font-bold group-hover:underline">Ver Post &rarr;</span>
+                </a>
+
+                <a data-social="ultimahora" href="https://x.com/UltimaHoraCR/status/2081431712362320025?s=20" target="_blank" rel="noopener noreferrer" class="social-card bg-white p-5 rounded-3xl border border-blush-100 hover:border-peri-300 hover:shadow-soft hover:-translate-y-0.5 transition flex flex-col justify-between group">
+                    <div>
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="inline-flex items-center gap-1.5 font-bold text-xs text-ink">@UltimaHoraCR <i class="ph-fill ph-seal-check text-peri-500"></i></span>
+                            <i class="ph-fill ph-x-logo text-muted group-hover:text-ink transition"></i>
+                        </div>
+                        <p class="text-muted text-sm leading-relaxed mb-4">Cobertura en vivo: Información de último minuto.</p>
+                    </div>
+                    <span class="text-peri-500 text-xs font-bold group-hover:underline">Ver Post &rarr;</span>
+                </a>
+
+                <a data-social="ultimahora" href="https://x.com/UltimaHoraCR/status/2060321912098615380?s=20" target="_blank" rel="noopener noreferrer" class="social-card bg-white p-5 rounded-3xl border border-blush-100 hover:border-peri-300 hover:shadow-soft hover:-translate-y-0.5 transition flex flex-col justify-between group">
+                    <div>
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="inline-flex items-center gap-1.5 font-bold text-xs text-ink">@UltimaHoraCR <i class="ph-fill ph-seal-check text-peri-500"></i></span>
+                            <i class="ph-fill ph-x-logo text-muted group-hover:text-ink transition"></i>
+                        </div>
+                        <p class="text-muted text-sm leading-relaxed mb-4">Cobertura en vivo: Información de último minuto.</p>
+                    </div>
+                    <span class="text-peri-500 text-xs font-bold group-hover:underline">Ver Post &rarr;</span>
+                </a>
+
+                <a data-social="ultimahora" href="https://x.com/UltimaHoraCR/status/2057095675632898464?s=20" target="_blank" rel="noopener noreferrer" class="social-card bg-white p-5 rounded-3xl border border-blush-100 hover:border-peri-300 hover:shadow-soft hover:-translate-y-0.5 transition flex flex-col justify-between group">
+                    <div>
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="inline-flex items-center gap-1.5 font-bold text-xs text-ink">@UltimaHoraCR <i class="ph-fill ph-seal-check text-peri-500"></i></span>
+                            <i class="ph-fill ph-x-logo text-muted group-hover:text-ink transition"></i>
+                        </div>
+                        <p class="text-muted text-sm leading-relaxed mb-4">Cobertura en vivo: Información de último minuto.</p>
+                    </div>
+                    <span class="text-peri-500 text-xs font-bold group-hover:underline">Ver Post &rarr;</span>
+                </a>
+
+                <a data-social="ultimahora" href="https://x.com/UltimaHoraCR/status/2054537959148224927?s=20" target="_blank" rel="noopener noreferrer" class="social-card bg-white p-5 rounded-3xl border border-blush-100 hover:border-peri-300 hover:shadow-soft hover:-translate-y-0.5 transition flex flex-col justify-between group">
+                    <div>
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="inline-flex items-center gap-1.5 font-bold text-xs text-ink">@UltimaHoraCR <i class="ph-fill ph-seal-check text-peri-500"></i></span>
+                            <i class="ph-fill ph-x-logo text-muted group-hover:text-ink transition"></i>
+                        </div>
+                        <p class="text-muted text-sm leading-relaxed mb-4">Cobertura en vivo: Información de último minuto.</p>
+                    </div>
+                    <span class="text-peri-500 text-xs font-bold group-hover:underline">Ver Post &rarr;</span>
+                </a>
+
+                <a data-social="ultimahora" href="https://x.com/UltimaHoraCR/status/2053875014009541092?s=20" target="_blank" rel="noopener noreferrer" class="social-card bg-white p-5 rounded-3xl border border-blush-100 hover:border-peri-300 hover:shadow-soft hover:-translate-y-0.5 transition flex flex-col justify-between group">
+                    <div>
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="inline-flex items-center gap-1.5 font-bold text-xs text-ink">@UltimaHoraCR <i class="ph-fill ph-seal-check text-peri-500"></i></span>
+                            <i class="ph-fill ph-x-logo text-muted group-hover:text-ink transition"></i>
+                        </div>
+                        <p class="text-muted text-sm leading-relaxed mb-4">Cobertura en vivo: Información de último minuto.</p>
+                    </div>
+                    <span class="text-peri-500 text-xs font-bold group-hover:underline">Ver Post &rarr;</span>
                 </a>
             </div>
         </div>
     </section>
 
+    <!-- Al Aire (Bright Modern Pastel Audio Section) -->
     <section id="audios" class="py-24 bg-white">
-        <div class="max-w-7xl mx-auto px-4">
-            
-            <div class="mb-20">
-                <div class="text-center mb-10">
-                    <span class="text-brand-accent font-bold uppercase tracking-wider text-sm flex justify-center items-center gap-2">
-                        <i class="ph-fill ph-microphone-stage"></i> Al Aire
-                    </span>
-                    <h2 class="text-3xl font-extrabold mb-2 text-gray-900">La Hora del Regreso (W Radio)</h2>
-                    <p class="text-gray-500">Emisiones completas al aire.</p>
-                </div>
-                
-                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    <div class="bg-gray-50 p-6 rounded-xl border border-gray-100 shadow-sm">
-                        <p class="font-bold text-gray-900 mb-1">Emisión 18 de Noviembre</p>
-                        <p class="text-xs text-gray-500 mb-3">Tramo 2:00 PM - 5:00 PM</p>
-                        <audio controls class="w-full h-10"><source src="W RADIO La Hora del Regreso  18 de 11 de 2025 Tramo de 14 a 5 pm.mp3" type="audio/mpeg"></audio>
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-14 reveal">
+                <span class="text-xs font-bold uppercase tracking-[0.18em] text-peri-500 block mb-2">Radio &amp; Locución</span>
+                <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-ink mb-4">
+                    Entrevistas, Especiales &amp; <span class="wave-word">Al Aire</span>
+                </h2>
+                <p class="text-muted text-sm sm:text-base">
+                    Escucha mis entrevistas internacionales, especiales informativos y emisiones completas en W Radio.
+                </p>
+            </div>
+
+            <!-- Entrevistas & Demos -->
+            <div class="mb-16 reveal">
+                <h3 class="font-serif text-2xl font-bold text-ink mb-6 flex items-center gap-2.5">
+                    <span class="w-3 h-3 rounded-full bg-rose-400"></span> Entrevistas, Especiales &amp; Demos
+                </h3>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+                    <div class="bg-peri-50/80 border-2 border-peri-200 p-6 rounded-3xl shadow-sm">
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="inline-flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-wider text-peri-600 bg-white px-3 py-1 rounded-full">
+                                <span class="w-2 h-2 rounded-full bg-rose-500 animate-pulse"></span> Entrevista
+                            </span>
+                            <span class="text-xs text-muted font-medium">2 de Nov</span>
+                        </div>
+                        <p class="font-bold text-ink mb-4">Entrevista Andrew Selee</p>
+                        <audio controls preload="metadata" class="w-full h-10">
+                            <source src="NT-ANDREA-ENTREVISTA-ANDREW-SELEE-2-NOV_3755908_2026-11-02T16-08-55.742.mp3.mp3" type="audio/mpeg">
+                        </audio>
                     </div>
-                    <div class="bg-gray-50 p-6 rounded-xl border border-gray-100 shadow-sm">
-                        <p class="font-bold text-gray-900 mb-1">Emisión 06 de Noviembre</p>
-                        <p class="text-xs text-gray-500 mb-3">Tramo 4:00 PM - 5:00 PM</p>
-                        <audio controls class="w-full h-10"><source src="W RADIO La Hora del Regreso  06 de 11 de 2025  Tramo de 4 a 5 pm.mp3" type="audio/mpeg"></audio>
+
+                    <div class="bg-peri-50/80 border-2 border-peri-200 p-6 rounded-3xl shadow-sm">
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="inline-flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-wider text-peri-600 bg-white px-3 py-1 rounded-full">
+                                <i class="ph-fill ph-globe text-peri-500"></i> Especial
+                            </span>
+                            <span class="text-xs text-muted font-medium">Internacional</span>
+                        </div>
+                        <p class="font-bold text-ink mb-4">Especial 100 Días – Internacional</p>
+                        <audio controls preload="metadata" class="w-full h-10">
+                            <source src="ESPECIAL-100-DIAS-ANDREA-INTERNACIONAL-2.mp3.mp3" type="audio/mpeg">
+                        </audio>
                     </div>
-                    <div class="bg-gray-50 p-6 rounded-xl border border-gray-100 shadow-sm">
-                        <p class="font-bold text-gray-900 mb-1">Emisión 06 de Noviembre</p>
-                        <p class="text-xs text-gray-500 mb-3">Tramo 5:00 PM - 6:00 PM</p>
-                        <audio controls class="w-full h-10"><source src="W RADIO La Hora del Regreso  06 de 11 de 2025 Tramo de 5 a 6 pm.mp3" type="audio/mpeg"></audio>
+
+                    <div class="bg-blush-50/70 border border-blush-200/80 p-6 rounded-3xl">
+                        <span class="inline-flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-wider text-rose-500 bg-white px-3 py-1 rounded-full mb-3">
+                            <span class="w-2 h-2 rounded-full bg-rose-500"></span> Al Aire
+                        </span>
+                        <p class="font-bold text-ink mb-4">Intervención en Vivo 1</p>
+                        <audio controls preload="metadata" class="w-full h-10">
+                            <source src="audio (1).mp3" type="audio/mpeg">
+                        </audio>
                     </div>
-                    <div class="bg-gray-50 p-6 rounded-xl border border-gray-100 shadow-sm">
-                        <p class="font-bold text-gray-900 mb-1">Emisión 27 de Noviembre</p>
-                        <p class="text-xs text-gray-500 mb-3">Tramo 4:00 PM - 5:00 PM</p>
-                        <audio controls class="w-full h-10"><source src="W RADIO La Hora del Regreso  27 de 11 de 2025  Tramo de 4 a 5 pm.mp3" type="audio/mpeg"></audio>
+
+                    <div class="bg-blush-50/70 border border-blush-200/80 p-6 rounded-3xl">
+                        <span class="inline-flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-wider text-rose-500 bg-white px-3 py-1 rounded-full mb-3">
+                            <span class="w-2 h-2 rounded-full bg-rose-500"></span> Al Aire
+                        </span>
+                        <p class="font-bold text-ink mb-4">Intervención en Vivo 2</p>
+                        <audio controls preload="metadata" class="w-full h-10">
+                            <source src="audio (2).mp3" type="audio/mpeg">
+                        </audio>
                     </div>
-                    <div class="bg-gray-50 p-6 rounded-xl border border-gray-100 shadow-sm">
-                        <p class="font-bold text-gray-900 mb-1">Emisión 27 de Noviembre</p>
-                        <p class="text-xs text-gray-500 mb-3">Tramo 5:00 PM - 6:00 PM</p>
-                        <audio controls class="w-full h-10"><source src="W RADIO La Hora del Regreso 27 de 11 de 2025  Tramo de 5 a 6 pm.mp3" type="audio/mpeg"></audio>
+
+                    <div class="bg-blush-50/70 border border-blush-200/80 p-6 rounded-3xl">
+                        <span class="inline-flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-wider text-peri-600 bg-white px-3 py-1 rounded-full mb-3">
+                            <i class="ph-fill ph-waveform"></i> Producción
+                        </span>
+                        <p class="font-bold text-ink mb-4">Producción Multimedia</p>
+                        <audio controls preload="metadata" class="w-full h-10">
+                            <source src="audio (3).mp3" type="audio/mpeg">
+                        </audio>
                     </div>
                 </div>
             </div>
 
-            <div>
-                <div class="text-center mb-10">
-                    <h2 class="text-3xl font-extrabold mb-2 text-gray-800">Extractos & Demos</h2>
-                    <p class="text-gray-500">Muestras de trabajo y producción multimedia.</p>
+            <!-- Emisiones Completas -->
+            <div class="reveal">
+                <h3 class="font-serif text-2xl font-bold text-ink mb-6 flex items-center gap-2.5">
+                    <span class="w-3 h-3 rounded-full bg-peri-500"></span> La Hora del Regreso · W Radio
+                </h3>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+                    <div class="bg-white border border-blush-200/80 p-5 rounded-3xl shadow-sm">
+                        <p class="font-bold text-ink text-sm">Emisión 27 de Noviembre</p>
+                        <p class="text-xs text-muted mb-3">Tramo 5:00 PM – 6:00 PM</p>
+                        <audio controls preload="metadata" class="w-full h-10"><source src="W RADIO La Hora del Regreso 27 de 11 de 2025  Tramo de 5 a 6 pm.mp3" type="audio/mpeg"></audio>
+                    </div>
+                    <div class="bg-white border border-blush-200/80 p-5 rounded-3xl shadow-sm">
+                        <p class="font-bold text-ink text-sm">Emisión 27 de Noviembre</p>
+                        <p class="text-xs text-muted mb-3">Tramo 4:00 PM – 5:00 PM</p>
+                        <audio controls preload="metadata" class="w-full h-10"><source src="W RADIO La Hora del Regreso  27 de 11 de 2025  Tramo de 4 a 5 pm.mp3" type="audio/mpeg"></audio>
+                    </div>
+                    <div class="bg-white border border-blush-200/80 p-5 rounded-3xl shadow-sm">
+                        <p class="font-bold text-ink text-sm">Emisión 18 de Noviembre</p>
+                        <p class="text-xs text-muted mb-3">Tramo 2:00 PM – 5:00 PM</p>
+                        <audio controls preload="metadata" class="w-full h-10"><source src="W RADIO La Hora del Regreso  18 de 11 de 2025 Tramo de 14 a 5 pm.mp3" type="audio/mpeg"></audio>
+                    </div>
+                    <div class="bg-white border border-blush-200/80 p-5 rounded-3xl shadow-sm">
+                        <p class="font-bold text-ink text-sm">Emisión 06 de Noviembre</p>
+                        <p class="text-xs text-muted mb-3">Tramo 5:00 PM – 6:00 PM</p>
+                        <audio controls preload="metadata" class="w-full h-10"><source src="W RADIO La Hora del Regreso  06 de 11 de 2025 Tramo de 5 a 6 pm.mp3" type="audio/mpeg"></audio>
+                    </div>
+                    <div class="bg-white border border-blush-200/80 p-5 rounded-3xl shadow-sm">
+                        <p class="font-bold text-ink text-sm">Emisión 06 de Noviembre</p>
+                        <p class="text-xs text-muted mb-3">Tramo 4:00 PM – 5:00 PM</p>
+                        <audio controls preload="metadata" class="w-full h-10"><source src="W RADIO La Hora del Regreso  06 de 11 de 2025  Tramo de 4 a 5 pm.mp3" type="audio/mpeg"></audio>
+                    </div>
                 </div>
-                <div class="grid md:grid-cols-3 gap-6">
-                    <div class="bg-white p-6 rounded-xl border border-gray-100 hover:shadow-md transition">
-                        <div class="flex items-center gap-2 mb-2"><div class="w-2 h-2 rounded-full bg-red-500 animate-pulse"></div><p class="font-bold text-sm uppercase">Al Aire</p></div>
-                        <p class="font-bold text-gray-900 mb-2">Intervención en Vivo 1</p>
-                        <audio controls class="w-full h-8 opacity-80"><source src="audio (1).mp3" type="audio/mpeg"></audio>
-                    </div>
-                    <div class="bg-white p-6 rounded-xl border border-gray-100 hover:shadow-md transition">
-                        <div class="flex items-center gap-2 mb-2"><div class="w-2 h-2 rounded-full bg-red-500 animate-pulse"></div><p class="font-bold text-sm uppercase">Al Aire</p></div>
-                        <p class="font-bold text-gray-900 mb-2">Intervención en Vivo 2</p>
-                        <audio controls class="w-full h-8 opacity-80"><source src="audio (2).mp3" type="audio/mpeg"></audio>
-                    </div>
-                    <div class="bg-white p-6 rounded-xl border border-gray-100 hover:shadow-md transition">
-                        <div class="flex items-center gap-2 mb-2"><div class="w-2 h-2 rounded-full bg-brand-accent"></div><p class="font-bold text-sm uppercase">Producción</p></div>
-                        <p class="font-bold text-gray-900 mb-2">Producción Multimedia</p>
-                        <audio controls class="w-full h-8 opacity-80"><source src="audio (3).mp3" type="audio/mpeg"></audio>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-    <section id="multimedia" class="py-24 bg-gray-50 border-t border-gray-200">
-        <div class="max-w-7xl mx-auto px-4">
-            <h2 class="text-3xl font-extrabold text-center mb-12">Videobook & Reels</h2>
-            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-                <div class="aspect-[9/16] bg-black rounded-xl overflow-hidden"><video class="w-full h-full object-cover" controls><source src="video (1).mp4" type="video/mp4"></video></div>
-                <div class="aspect-[9/16] bg-black rounded-xl overflow-hidden"><video class="w-full h-full object-cover" controls><source src="video (2).mp4" type="video/mp4"></video></div>
-                <div class="aspect-[9/16] bg-black rounded-xl overflow-hidden"><video class="w-full h-full object-cover" controls><source src="video (3).mp4" type="video/mp4"></video></div>
-                <div class="aspect-[9/16] bg-black rounded-xl overflow-hidden"><video class="w-full h-full object-cover" controls><source src="video (4).mp4" type="video/mp4"></video></div>
-                <div class="aspect-[9/16] bg-black rounded-xl overflow-hidden"><video class="w-full h-full object-cover" controls><source src="video (5).mp4" type="video/mp4"></video></div>
-                <div class="aspect-[9/16] bg-black rounded-xl overflow-hidden"><video class="w-full h-full object-cover" controls><source src="video (6).mp4" type="video/mp4"></video></div>
-                <div class="aspect-[9/16] bg-black rounded-xl overflow-hidden"><video class="w-full h-full object-cover" controls><source src="presi.mp4" type="video/mp4"></video></div>
-                  <div class="aspect-[9/16] bg-black rounded-xl overflow-hidden"><video class="w-full h-full object-cover" controls><source src="dukitho.mp4" type="video/mp4"></video></div>
-                <div class="w-full max-w-4xl aspect-[16/9] bg-black rounded-xl overflow-hidden mx-auto">
-<div class="col-span-full w-full max-w-4xl aspect-[16/9] bg-black rounded-xl overflow-hidden mx-auto">
-    <video class="w-full h-full object-cover" controls>
-        <source src="Caracol radio Andrea Novoa.mp4" type="video/mp4">
-    </video>
-</div>
-            </div>  
-        </div>
-    </section>
-
-    <section id="galeria" class="py-20 bg-white border-t border-gray-200">
-        <div class="max-w-7xl mx-auto px-4">
-            <h2 class="text-3xl font-extrabold text-center mb-12">Galería Fotográfica</h2>
-            <div class="grid grid-cols-2 md:grid-cols-5 gap-4">
-                <div class="rounded-xl overflow-hidden shadow-sm hover:scale-105 transition cursor-pointer"><img src="pic (1).jpeg" class="w-full h-48 object-cover" onclick="openModal(this.src)"></div>
-                <div class="rounded-xl overflow-hidden shadow-sm hover:scale-105 transition cursor-pointer"><img src="pic (2).jpeg" class="w-full h-48 object-cover" onclick="openModal(this.src)"></div>
-                <div class="rounded-xl overflow-hidden shadow-sm hover:scale-105 transition cursor-pointer"><img src="pic (3).jpeg" class="w-full h-48 object-cover" onclick="openModal(this.src)"></div>
-                <div class="rounded-xl overflow-hidden shadow-sm hover:scale-105 transition cursor-pointer"><img src="pic (4).jpeg" class="w-full h-48 object-cover" onclick="openModal(this.src)"></div>
-                <div class="rounded-xl overflow-hidden shadow-sm hover:scale-105 transition cursor-pointer"><img src="pic (5).jpeg" class="w-full h-48 object-cover" onclick="openModal(this.src)"></div>
-                
-                <div class="rounded-xl overflow-hidden shadow-sm hover:scale-105 transition cursor-pointer"><img src="pic (6).jpeg" class="w-full h-48 object-cover" onclick="openModal(this.src)"></div>
-                <div class="rounded-xl overflow-hidden shadow-sm hover:scale-105 transition cursor-pointer"><img src="pic (7).jpeg" class="w-full h-48 object-cover" onclick="openModal(this.src)"></div>
-                <div class="rounded-xl overflow-hidden shadow-sm hover:scale-105 transition cursor-pointer"><img src="pic (8).jpeg" class="w-full h-48 object-cover" onclick="openModal(this.src)"></div>
-                <div class="rounded-xl overflow-hidden shadow-sm hover:scale-105 transition cursor-pointer"><img src="pic (9).jpeg" class="w-full h-48 object-cover" onclick="openModal(this.src)"></div>
-                <div class="rounded-xl overflow-hidden shadow-sm hover:scale-105 transition cursor-pointer"><img src="pic (10).jpeg" class="w-full h-48 object-cover" onclick="openModal(this.src)"></div>
-                
-                <div class="rounded-xl overflow-hidden shadow-sm hover:scale-105 transition cursor-pointer"><img src="yo.jpeg" class="w-full h-48 object-cover" onclick="openModal(this.src)"></div>
-                <div class="rounded-xl overflow-hidden shadow-sm hover:scale-105 transition cursor-pointer"><img src="presi.jpeg" class="w-full h-48 object-cover" onclick="openModal(this.src)"></div>
-                <div class="rounded-xl overflow-hidden shadow-sm hover:scale-105 transition cursor-pointer"><img src="juandi.jpeg" class="w-full h-48 object-cover" onclick="openModal(this.src)"></div>
-                <div class="rounded-xl overflow-hidden shadow-sm hover:scale-105 transition cursor-pointer"><img src="studio1 (1).jpeg" class="w-full h-48 object-cover" onclick="openModal(this.src)"></div>
-                <div class="rounded-xl overflow-hidden shadow-sm hover:scale-105 transition cursor-pointer"><img src="studio1 (2).jpeg" class="w-full h-48 object-cover" onclick="openModal(this.src)"></div>
             </div>
         </div>
     </section>
 
-    <section id="educacion" class="py-20 bg-gray-50 border-t border-gray-200">
-        <div class="max-w-6xl mx-auto px-4">
-            <div class="text-center mb-16">
-                <span class="text-brand-accent font-bold uppercase tracking-wider text-sm">Mi Base</span>
-                <h2 class="text-3xl font-extrabold text-gray-900 mt-2">Formación Académica</h2>
+    <!-- Videobook & Reels (Periwinkle Showcase Frames like Reference!) -->
+    <section id="multimedia" class="py-24 bg-blush-50/80 border-t border-blush-100">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-14 reveal">
+                <span class="text-xs font-bold uppercase tracking-[0.18em] text-peri-500 block mb-2">Contenido Audiovisual</span>
+                <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-ink mb-4">
+                    Videobook &amp; <span class="wave-word">Reels</span>
+                </h2>
+                <p class="text-muted text-sm sm:text-base">
+                    Presentación informativa en Caracol Radio y cápsulas verticales diseñadas para redes sociales.
+                </p>
             </div>
 
-            <div class="grid md:grid-cols-2 gap-8">
+            <!-- Horizontal Caracol Radio Videos in Signature Periwinkle Frames -->
+            <div class="grid lg:grid-cols-2 gap-6 mb-14 reveal">
+                <div class="bg-peri-200/75 p-3 rounded-[2rem] shadow-soft">
+                    <div class="bg-white rounded-[1.5rem] overflow-hidden">
+                        <div class="bg-ink aspect-[16/9] flex items-center justify-center">
+                            <video class="w-full h-full object-contain" controls preload="metadata">
+                                <source src="caracol radio noticias.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="px-5 py-4 flex items-center justify-between">
+                            <div>
+                                <p class="text-[11px] font-bold text-peri-500 uppercase tracking-wider">Caracol Radio</p>
+                                <h3 class="font-bold text-ink text-sm sm:text-base">Caracol Radio Noticias</h3>
+                            </div>
+                            <span class="w-9 h-9 rounded-full bg-peri-50 text-peri-500 flex items-center justify-center"><i class="ph-fill ph-play"></i></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-peri-200/75 p-3 rounded-[2rem] shadow-soft">
+                    <div class="bg-white rounded-[1.5rem] overflow-hidden">
+                        <div class="bg-ink aspect-[16/9] flex items-center justify-center">
+                            <video class="w-full h-full object-contain" controls preload="metadata">
+                                <source src="Caracol radio Andrea Novoa.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="px-5 py-4 flex items-center justify-between">
+                            <div>
+                                <p class="text-[11px] font-bold text-peri-500 uppercase tracking-wider">Caracol Radio</p>
+                                <h3 class="font-bold text-ink text-sm sm:text-base">Participación en Estudio</h3>
+                            </div>
+                            <span class="w-9 h-9 rounded-full bg-peri-50 text-peri-500 flex items-center justify-center"><i class="ph-fill ph-play"></i></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Vertical Reels Grid (All 11 Reels) -->
+            <div class="reveal">
+                <div class="flex items-center justify-between mb-6">
+                    <h3 class="font-serif text-2xl font-bold text-ink">Reels &amp; Cápsulas Verticales</h3>
+                    <span class="text-xs font-bold text-peri-500 bg-white px-3.5 py-1.5 rounded-full border border-peri-100">11 reels</span>
+                </div>
+
+                <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-5">
+                    <div class="bg-white p-2 rounded-[1.5rem] border border-blush-200/70 shadow-sm">
+                        <div class="aspect-[9/16] bg-ink rounded-2xl overflow-hidden">
+                            <video class="w-full h-full object-cover" controls preload="metadata"><source src="inflacion.mp4" type="video/mp4"></video>
+                        </div>
+                        <p class="px-2 pt-2.5 pb-1 text-xs font-bold text-ink truncate">Inflación</p>
+                    </div>
+                    <div class="bg-white p-2 rounded-[1.5rem] border border-blush-200/70 shadow-sm">
+                        <div class="aspect-[9/16] bg-ink rounded-2xl overflow-hidden">
+                            <video class="w-full h-full object-cover" controls preload="metadata"><source src="prima 1.mp4" type="video/mp4"></video>
+                        </div>
+                        <p class="px-2 pt-2.5 pb-1 text-xs font-bold text-ink truncate">Prima · Parte 1</p>
+                    </div>
+                    <div class="bg-white p-2 rounded-[1.5rem] border border-blush-200/70 shadow-sm">
+                        <div class="aspect-[9/16] bg-ink rounded-2xl overflow-hidden">
+                            <video class="w-full h-full object-cover" controls preload="metadata"><source src="prima 2.mp4" type="video/mp4"></video>
+                        </div>
+                        <p class="px-2 pt-2.5 pb-1 text-xs font-bold text-ink truncate">Prima · Parte 2</p>
+                    </div>
+                    <div class="bg-white p-2 rounded-[1.5rem] border border-blush-200/70 shadow-sm">
+                        <div class="aspect-[9/16] bg-ink rounded-2xl overflow-hidden">
+                            <video class="w-full h-full object-cover" controls preload="metadata"><source src="presi.mp4" type="video/mp4"></video>
+                        </div>
+                        <p class="px-2 pt-2.5 pb-1 text-xs font-bold text-ink truncate">Cobertura Especial</p>
+                    </div>
+                    <div class="bg-white p-2 rounded-[1.5rem] border border-blush-200/70 shadow-sm">
+                        <div class="aspect-[9/16] bg-ink rounded-2xl overflow-hidden">
+                            <video class="w-full h-full object-cover" controls preload="metadata"><source src="dukitho.mp4" type="video/mp4"></video>
+                        </div>
+                        <p class="px-2 pt-2.5 pb-1 text-xs font-bold text-ink truncate">Reel Digital</p>
+                    </div>
+                    <div class="bg-white p-2 rounded-[1.5rem] border border-blush-200/70 shadow-sm">
+                        <div class="aspect-[9/16] bg-ink rounded-2xl overflow-hidden">
+                            <video class="w-full h-full object-cover" controls preload="metadata"><source src="video (1).mp4" type="video/mp4"></video>
+                        </div>
+                        <p class="px-2 pt-2.5 pb-1 text-xs font-bold text-ink truncate">Cápsula 01</p>
+                    </div>
+                    <div class="bg-white p-2 rounded-[1.5rem] border border-blush-200/70 shadow-sm">
+                        <div class="aspect-[9/16] bg-ink rounded-2xl overflow-hidden">
+                            <video class="w-full h-full object-cover" controls preload="metadata"><source src="video (2).mp4" type="video/mp4"></video>
+                        </div>
+                        <p class="px-2 pt-2.5 pb-1 text-xs font-bold text-ink truncate">Cápsula 02</p>
+                    </div>
+                    <div class="bg-white p-2 rounded-[1.5rem] border border-blush-200/70 shadow-sm">
+                        <div class="aspect-[9/16] bg-ink rounded-2xl overflow-hidden">
+                            <video class="w-full h-full object-cover" controls preload="metadata"><source src="video (3).mp4" type="video/mp4"></video>
+                        </div>
+                        <p class="px-2 pt-2.5 pb-1 text-xs font-bold text-ink truncate">Cápsula 03</p>
+                    </div>
+                    <div class="bg-white p-2 rounded-[1.5rem] border border-blush-200/70 shadow-sm">
+                        <div class="aspect-[9/16] bg-ink rounded-2xl overflow-hidden">
+                            <video class="w-full h-full object-cover" controls preload="metadata"><source src="video (4).mp4" type="video/mp4"></video>
+                        </div>
+                        <p class="px-2 pt-2.5 pb-1 text-xs font-bold text-ink truncate">Cápsula 04</p>
+                    </div>
+                    <div class="bg-white p-2 rounded-[1.5rem] border border-blush-200/70 shadow-sm">
+                        <div class="aspect-[9/16] bg-ink rounded-2xl overflow-hidden">
+                            <video class="w-full h-full object-cover" controls preload="metadata"><source src="video (5).mp4" type="video/mp4"></video>
+                        </div>
+                        <p class="px-2 pt-2.5 pb-1 text-xs font-bold text-ink truncate">Cápsula 05</p>
+                    </div>
+                    <div class="bg-white p-2 rounded-[1.5rem] border border-blush-200/70 shadow-sm">
+                        <div class="aspect-[9/16] bg-ink rounded-2xl overflow-hidden">
+                            <video class="w-full h-full object-cover" controls preload="metadata"><source src="video (6).mp4" type="video/mp4"></video>
+                        </div>
+                        <p class="px-2 pt-2.5 pb-1 text-xs font-bold text-ink truncate">Cápsula 06</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Galería Fotográfica -->
+    <section id="galeria" class="py-24 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-12 reveal">
+                <span class="text-xs font-bold uppercase tracking-[0.18em] text-peri-500 block mb-2">Detrás de Cámaras</span>
+                <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-ink mb-3">
+                    Galería <span class="wave-word wave-pink">Fotográfica</span>
+                </h2>
+                <p class="text-muted text-sm">Haz clic en cualquier foto para verla en grande.</p>
+            </div>
+
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3.5 reveal">
+                <button type="button" onclick="openModal(0)" class="group relative aspect-square rounded-3xl overflow-hidden bg-blush-50 border border-blush-100 focus:outline-none focus:ring-2 focus:ring-peri-500">
+                    <img src="pic (1).jpeg" alt="Galería 1" loading="lazy" class="gallery-img w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                </button>
+                <button type="button" onclick="openModal(1)" class="group relative aspect-square rounded-3xl overflow-hidden bg-blush-50 border border-blush-100 focus:outline-none focus:ring-2 focus:ring-peri-500">
+                    <img src="pic (2).jpeg" alt="Galería 2" loading="lazy" class="gallery-img w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                </button>
+                <button type="button" onclick="openModal(2)" class="group relative aspect-square rounded-3xl overflow-hidden bg-blush-50 border border-blush-100 focus:outline-none focus:ring-2 focus:ring-peri-500">
+                    <img src="pic (3).jpeg" alt="Galería 3" loading="lazy" class="gallery-img w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                </button>
+                <button type="button" onclick="openModal(3)" class="group relative aspect-square rounded-3xl overflow-hidden bg-blush-50 border border-blush-100 focus:outline-none focus:ring-2 focus:ring-peri-500">
+                    <img src="pic (4).jpeg" alt="Galería 4" loading="lazy" class="gallery-img w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                </button>
+                <button type="button" onclick="openModal(4)" class="group relative aspect-square rounded-3xl overflow-hidden bg-blush-50 border border-blush-100 focus:outline-none focus:ring-2 focus:ring-peri-500">
+                    <img src="pic (5).jpeg" alt="Galería 5" loading="lazy" class="gallery-img w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                </button>
+                <button type="button" onclick="openModal(5)" class="group relative aspect-square rounded-3xl overflow-hidden bg-blush-50 border border-blush-100 focus:outline-none focus:ring-2 focus:ring-peri-500">
+                    <img src="pic (6).jpeg" alt="Galería 6" loading="lazy" class="gallery-img w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                </button>
+                <button type="button" onclick="openModal(6)" class="group relative aspect-square rounded-3xl overflow-hidden bg-blush-50 border border-blush-100 focus:outline-none focus:ring-2 focus:ring-peri-500">
+                    <img src="pic (7).jpeg" alt="Galería 7" loading="lazy" class="gallery-img w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                </button>
+                <button type="button" onclick="openModal(7)" class="group relative aspect-square rounded-3xl overflow-hidden bg-blush-50 border border-blush-100 focus:outline-none focus:ring-2 focus:ring-peri-500">
+                    <img src="pic (8).jpeg" alt="Galería 8" loading="lazy" class="gallery-img w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                </button>
+                <button type="button" onclick="openModal(8)" class="group relative aspect-square rounded-3xl overflow-hidden bg-blush-50 border border-blush-100 focus:outline-none focus:ring-2 focus:ring-peri-500">
+                    <img src="pic (9).jpeg" alt="Galería 9" loading="lazy" class="gallery-img w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                </button>
+                <button type="button" onclick="openModal(9)" class="group relative aspect-square rounded-3xl overflow-hidden bg-blush-50 border border-blush-100 focus:outline-none focus:ring-2 focus:ring-peri-500">
+                    <img src="pic (10).jpeg" alt="Galería 10" loading="lazy" class="gallery-img w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                </button>
+                <button type="button" onclick="openModal(10)" class="group relative aspect-square rounded-3xl overflow-hidden bg-blush-50 border border-blush-100 focus:outline-none focus:ring-2 focus:ring-peri-500">
+                    <img src="yo.jpeg" alt="Galería 11" loading="lazy" class="gallery-img w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                </button>
+                <button type="button" onclick="openModal(11)" class="group relative aspect-square rounded-3xl overflow-hidden bg-blush-50 border border-blush-100 focus:outline-none focus:ring-2 focus:ring-peri-500">
+                    <img src="presi.jpeg" alt="Galería 12" loading="lazy" class="gallery-img w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                </button>
+                <button type="button" onclick="openModal(12)" class="group relative aspect-square rounded-3xl overflow-hidden bg-blush-50 border border-blush-100 focus:outline-none focus:ring-2 focus:ring-peri-500">
+                    <img src="juandi.jpeg" alt="Galería 13" loading="lazy" class="gallery-img w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                </button>
+                <button type="button" onclick="openModal(13)" class="group relative aspect-square rounded-3xl overflow-hidden bg-blush-50 border border-blush-100 focus:outline-none focus:ring-2 focus:ring-peri-500">
+                    <img src="studio1 (1).jpeg" alt="Galería 14" loading="lazy" class="gallery-img w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                </button>
+                <button type="button" onclick="openModal(14)" class="group relative aspect-square rounded-3xl overflow-hidden bg-blush-50 border border-blush-100 focus:outline-none focus:ring-2 focus:ring-peri-500">
+                    <img src="studio1 (2).jpeg" alt="Galería 15" loading="lazy" class="gallery-img w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Formación Académica & Herramientas -->
+    <section id="educacion" class="py-24 bg-blush-50/80 border-t border-blush-100">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-14 reveal">
+                <span class="text-xs font-bold uppercase tracking-[0.18em] text-peri-500 block mb-2">Mi Base</span>
+                <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-ink">
+                    Formación &amp; <span class="wave-word">Herramientas</span>
+                </h2>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-6 mb-10 reveal">
                 <div class="space-y-6">
-                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
-                        <div class="flex items-center gap-3 mb-2"><i class="ph-fill ph-student text-2xl text-brand-accent"></i><h3 class="font-bold text-gray-900 text-lg">Pregrado Universitario</h3></div>
-                        <p class="font-semibold">Comunicación Social y Periodismo</p>
-                        <p class="text-gray-500 text-sm">Fundación Universitaria Los Libertadores (2021 - Presente)</p>
+                    <div class="bg-white p-7 rounded-3xl border border-blush-100 shadow-sm">
+                        <div class="flex items-center gap-3 mb-3">
+                            <span class="w-11 h-11 rounded-2xl bg-peri-100 text-peri-500 flex items-center justify-center text-2xl"><i class="ph-fill ph-student"></i></span>
+                            <div>
+                                <p class="text-[11px] font-bold uppercase tracking-wider text-peri-500">2021 – Presente</p>
+                                <h3 class="font-bold text-ink text-lg">Pregrado Universitario</h3>
+                            </div>
+                        </div>
+                        <p class="font-semibold text-ink">Comunicación Social y Periodismo</p>
+                        <p class="text-muted text-sm mt-1">Fundación Universitaria Los Libertadores</p>
                     </div>
-                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
-                        <div class="flex items-center gap-3 mb-2"><i class="ph-fill ph-graduation-cap text-2xl text-brand-accent"></i><h3 class="font-bold text-gray-900 text-lg">Bachillerato</h3></div>
-                        <ul class="space-y-3">
-                            <li><p class="font-semibold">Bachiller Académico</p><p class="text-gray-500 text-sm">Colegio El Ensueño (IED) | 2019 - 2020</p></li>
-                            <li class="border-t pt-2"><p class="font-semibold">Educación Básica y Media</p><p class="text-gray-500 text-sm">Colegio Orestes Sindici | 2015 - 2019</p></li>
+
+                    <div class="bg-white p-7 rounded-3xl border border-blush-100 shadow-sm">
+                        <div class="flex items-center gap-3 mb-4">
+                            <span class="w-11 h-11 rounded-2xl bg-blush-100 text-rose-500 flex items-center justify-center text-2xl"><i class="ph-fill ph-graduation-cap"></i></span>
+                            <h3 class="font-bold text-ink text-lg">Bachillerato</h3>
+                        </div>
+                        <ul class="space-y-3 text-sm">
+                            <li class="flex items-center justify-between gap-2">
+                                <div><p class="font-semibold text-ink">Bachiller Académico</p><p class="text-xs text-muted">Colegio El Ensueño (IED)</p></div>
+                                <span class="text-xs font-semibold text-muted">2019 – 2020</span>
+                            </li>
+                            <li class="border-t border-blush-50 pt-3 flex items-center justify-between gap-2">
+                                <div><p class="font-semibold text-ink">Educación Básica y Media</p><p class="text-xs text-muted">Colegio Orestes Sindici</p></div>
+                                <span class="text-xs font-semibold text-muted">2015 – 2019</span>
+                            </li>
                         </ul>
                     </div>
                 </div>
+
                 <div class="space-y-6">
-                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
-                        <div class="flex items-center gap-3 mb-2"><i class="ph-fill ph-certificate text-2xl text-orange-500"></i><h3 class="font-bold text-gray-900 text-lg">Certificaciones & Eventos</h3></div>
+                    <div class="bg-white p-7 rounded-3xl border border-blush-100 shadow-sm">
+                        <div class="flex items-center gap-3 mb-4">
+                            <span class="w-11 h-11 rounded-2xl bg-blush-100 text-rose-500 flex items-center justify-center text-2xl"><i class="ph-fill ph-certificate"></i></span>
+                            <h3 class="font-bold text-ink text-lg">Certificaciones &amp; Eventos</h3>
+                        </div>
                         <ul class="space-y-4">
-                            <li><p class="font-bold text-gray-800">Marketing Dealers</p><p class="text-sm text-gray-500">Congreso de Líderes de Mercadeo - Universidad EAN (2023)</p></li>
-                            <li class="border-t pt-3"><p class="font-bold text-gray-800">Movimiento CLIC</p><p class="text-sm text-gray-500">Congreso Latinoamericano de Innovación y Creatividad (2023)</p></li>
+                            <li>
+                                <p class="font-bold text-ink text-sm">Marketing Dealers <span class="text-xs font-semibold text-peri-500 ml-1">2023</span></p>
+                                <p class="text-xs text-muted mt-0.5">Congreso de Líderes de Mercadeo – Universidad EAN</p>
+                            </li>
+                            <li class="border-t border-blush-50 pt-3.5">
+                                <p class="font-bold text-ink text-sm">Movimiento CLIC <span class="text-xs font-semibold text-peri-500 ml-1">2023</span></p>
+                                <p class="text-xs text-muted mt-0.5">Congreso Latinoamericano de Innovación y Creatividad</p>
+                            </li>
                         </ul>
                     </div>
-                    <div class="bg-brand-accent text-white p-6 rounded-2xl shadow-lg">
-                        <h3 class="font-bold text-lg mb-2 flex items-center gap-2"><i class="ph-fill ph-translate"></i> Idiomas</h3>
-                        <p class="font-medium">Español: Nativo</p>
-                        <p class="font-medium">Inglés: Nivel B1 (Intermedio)</p>
+
+                    <div class="bg-gradient-to-br from-peri-500 to-peri-600 text-white p-7 rounded-3xl shadow-pill">
+                        <h3 class="font-bold text-lg mb-4 flex items-center gap-2"><i class="ph-fill ph-translate text-xl"></i> Idiomas</h3>
+                        <div class="grid grid-cols-2 gap-3">
+                            <div class="bg-white/15 backdrop-blur-sm rounded-2xl p-3.5">
+                                <p class="text-xs text-peri-100">Español</p>
+                                <p class="font-bold">Nativo</p>
+                            </div>
+                            <div class="bg-white/15 backdrop-blur-sm rounded-2xl p-3.5">
+                                <p class="text-xs text-peri-100">Inglés</p>
+                                <p class="font-bold">Nivel B1</p>
+                            </div>
+                        </div>
                     </div>
+                </div>
+            </div>
+
+            <!-- Herramientas Pills -->
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 reveal">
+                <div class="bg-white p-5 rounded-3xl border border-blush-100 text-center shadow-sm">
+                    <div class="w-12 h-12 mx-auto rounded-2xl bg-blush-100 text-rose-500 flex items-center justify-center text-2xl mb-3"><i class="ph-fill ph-waveform"></i></div>
+                    <h4 class="font-bold text-ink text-sm">Edición de Audio</h4>
+                    <p class="text-xs text-muted mt-1">Adobe Audition</p>
+                </div>
+                <div class="bg-white p-5 rounded-3xl border border-blush-100 text-center shadow-sm">
+                    <div class="w-12 h-12 mx-auto rounded-2xl bg-peri-100 text-peri-500 flex items-center justify-center text-2xl mb-3"><i class="ph-fill ph-article"></i></div>
+                    <h4 class="font-bold text-ink text-sm">Redacción</h4>
+                    <p class="text-xs text-muted mt-1">Prensa, Guiones &amp; SEO</p>
+                </div>
+                <div class="bg-white p-5 rounded-3xl border border-blush-100 text-center shadow-sm">
+                    <div class="w-12 h-12 mx-auto rounded-2xl bg-blush-100 text-rose-500 flex items-center justify-center text-2xl mb-3"><i class="ph-fill ph-film-strip"></i></div>
+                    <h4 class="font-bold text-ink text-sm">Edición de Video</h4>
+                    <p class="text-xs text-muted mt-1">CapCut &amp; Premiere</p>
+                </div>
+                <div class="bg-white p-5 rounded-3xl border border-blush-100 text-center shadow-sm">
+                    <div class="w-12 h-12 mx-auto rounded-2xl bg-peri-100 text-peri-500 flex items-center justify-center text-2xl mb-3"><i class="ph-fill ph-broadcast"></i></div>
+                    <h4 class="font-bold text-ink text-sm">Producción Radial</h4>
+                    <p class="text-xs text-muted mt-1">Consola &amp; Locución</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="habilidades" class="py-20 bg-white">
-        <div class="max-w-6xl mx-auto px-4">
-            <div class="text-center mb-16">
-                <span class="text-brand-accent font-bold uppercase tracking-wider text-sm">Competencias</span>
-                <h2 class="text-3xl font-extrabold text-gray-900 mt-2">Herramientas & Habilidades</h2>
+    <!-- Referencias (Signature Periwinkle Testimonial Cards from Reference!) -->
+    <section class="py-24 bg-white">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 reveal">
+            <div class="text-center mb-12">
+                <span class="text-xs font-bold uppercase tracking-[0.18em] text-peri-500 block mb-2">Recomendaciones</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-ink">
+                    Referencias <span class="wave-word wave-pink">Profesionales</span>
+                </h2>
             </div>
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-                <div class="p-6 rounded-2xl bg-gray-50 hover:bg-orange-50 transition border border-gray-100 hover:border-brand-accent group text-center">
-                    <div class="w-14 h-14 mx-auto bg-white rounded-full flex items-center justify-center shadow-sm mb-4 group-hover:scale-110 transition text-brand-accent text-3xl"><i class="ph-fill ph-wave-form"></i></div>
-                    <h3 class="font-bold text-gray-900">Edición de Audio</h3><p class="text-sm text-gray-500 mt-2">Adobe Audition</p>
-                </div>
-                <div class="p-6 rounded-2xl bg-gray-50 hover:bg-orange-50 transition border border-gray-100 hover:border-brand-accent group text-center">
-                    <div class="w-14 h-14 mx-auto bg-white rounded-full flex items-center justify-center shadow-sm mb-4 group-hover:scale-110 transition text-brand-accent text-3xl"><i class="ph-fill ph-article"></i></div>
-                    <h3 class="font-bold text-gray-900">Redacción</h3><p class="text-sm text-gray-500 mt-2">Prensa, Guiones & SEO</p>
-                </div>
-                <div class="p-6 rounded-2xl bg-gray-50 hover:bg-orange-50 transition border border-gray-100 hover:border-brand-accent group text-center">
-                    <div class="w-14 h-14 mx-auto bg-white rounded-full flex items-center justify-center shadow-sm mb-4 group-hover:scale-110 transition text-brand-accent text-3xl"><i class="ph-fill ph-film-strip"></i></div>
-                    <h3 class="font-bold text-gray-900">Edición de Video</h3><p class="text-sm text-gray-500 mt-2">CapCut & Premiere</p>
-                </div>
-                <div class="p-6 rounded-2xl bg-gray-50 hover:bg-orange-50 transition border border-gray-100 hover:border-brand-accent group text-center">
-                    <div class="w-14 h-14 mx-auto bg-white rounded-full flex items-center justify-center shadow-sm mb-4 group-hover:scale-110 transition text-brand-accent text-3xl"><i class="ph-fill ph-broadcast"></i></div>
-                    <h3 class="font-bold text-gray-900">Producción Radial</h3><p class="text-sm text-gray-500 mt-2">Manejo de Consola & Locución</p>
-                </div>
+
+            <div class="grid md:grid-cols-2 gap-6">
+                <blockquote class="bg-peri-100/85 p-8 rounded-[2rem] relative flex flex-col justify-between shadow-soft">
+                    <i class="ph-fill ph-quotes text-5xl text-white/80 mb-3 block"></i>
+                    <p class="text-ink text-base sm:text-lg leading-relaxed mb-6 font-medium">
+                        “Camila destaca por su capacidad de redacción y compromiso en el ámbito académico y profesional.”
+                    </p>
+                    <div class="flex items-center gap-3.5">
+                        <div class="w-11 h-11 rounded-full bg-white text-peri-600 font-bold text-sm flex items-center justify-center shadow-sm">MF</div>
+                        <div>
+                            <h4 class="font-bold text-ink text-sm">Maria Del Pilar Flor Sánchez</h4>
+                            <p class="text-xs text-ink/70">Docente Universitaria · Los Libertadores</p>
+                        </div>
+                    </div>
+                </blockquote>
+
+                <blockquote class="bg-blush-100/85 p-8 rounded-[2rem] relative flex flex-col justify-between shadow-blush">
+                    <i class="ph-fill ph-quotes text-5xl text-white/80 mb-3 block"></i>
+                    <p class="text-ink text-base sm:text-lg leading-relaxed mb-6 font-medium">
+                        “Excelente profesional con grandes habilidades de comunicación y gestión de proyectos.”
+                    </p>
+                    <div class="flex items-center gap-3.5">
+                        <div class="w-11 h-11 rounded-full bg-white text-rose-500 font-bold text-sm flex items-center justify-center shadow-sm">LR</div>
+                        <div>
+                            <h4 class="font-bold text-ink text-sm">Luis Ariel Romero</h4>
+                            <p class="text-xs text-ink/70">Arquitecto</p>
+                        </div>
+                    </div>
+                </blockquote>
             </div>
         </div>
     </section>
 
-    <section class="py-20 bg-white border-t border-gray-200">
-        <div class="max-w-6xl mx-auto px-4">
-            <h2 class="text-3xl font-extrabold text-center mb-12">Referencias Profesionales</h2>
-            <div class="grid md:grid-cols-2 gap-8">
-                <div class="p-8 bg-gray-50 rounded-2xl border border-gray-100 flex items-start gap-4 relative">
-                    <i class="ph-fill ph-quotes text-6xl text-gray-200 absolute top-4 right-4"></i>
-                    <div class="w-16 h-16 bg-brand-accent/20 rounded-full flex items-center justify-center text-brand-accent font-bold text-2xl flex-shrink-0">MF</div>
-                    <div>
-                        <p class="text-gray-600 italic mb-4">"Camila destaca por su capacidad de redacción y compromiso en el ámbito académico y profesional."</p>
-                        <h4 class="font-bold text-gray-900">Maria Del Pilar Flor Sánchez</h4>
-                        <p class="text-xs text-brand-accent font-bold uppercase">Docente Universitaria</p>
-                        <p class="text-xs text-gray-400">Fundación Universitaria Los Libertadores</p>
-                    </div>
-                </div>
-                <div class="p-8 bg-gray-50 rounded-2xl border border-gray-100 flex items-start gap-4 relative">
-                    <i class="ph-fill ph-quotes text-6xl text-gray-200 absolute top-4 right-4"></i>
-                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 font-bold text-2xl flex-shrink-0">LR</div>
-                    <div>
-                        <p class="text-gray-600 italic mb-4">"Excelente profesional con grandes habilidades de comunicación y gestión de proyectos."</p>
-                        <h4 class="font-bold text-gray-900">Luis Ariel Romero</h4>
-                        <p class="text-xs text-blue-600 font-bold uppercase">Arquitecto</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    <!-- Contact / Footer (Airy "Feel Free to Say Hi!" inspired by Reference!) -->
+    <footer id="contacto" class="py-24 bg-gradient-to-b from-blush-50/70 via-blush-50 to-white border-t border-blush-100">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center reveal">
+            <span class="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-[0.18em] text-peri-500 mb-3">
+                <i class="ph-fill ph-sparkle"></i> Disponible para nuevos proyectos
+            </span>
+            <h2 class="font-serif text-3xl sm:text-5xl font-bold text-ink leading-tight mb-5">
+                Eso es todo sobre mí.<br>
+                ¡Hablemos cuando <span class="wave-word">quieras!</span>
+            </h2>
+            <p class="text-muted text-sm sm:text-base max-w-md mx-auto mb-9 leading-relaxed">
+                Bogotá, D.C. · Escríbeme si buscas periodista, redactora digital, community manager o productora multimedia.
+            </p>
 
-    <section id="contacto" class="py-24 bg-brand-dark text-white relative">
-        <div class="max-w-4xl mx-auto px-4 text-center">
-            <h2 class="text-4xl font-extrabold mb-8">Contacto</h2>
-            <p class="text-orange-200 mb-12">Bogotá, D.C. • Disponible para proyectos.</p>
-            <div class="grid md:grid-cols-2 gap-6 mb-12">
-                <a href="tel:+573245040770" class="flex flex-col items-center justify-center gap-3 bg-white/5 hover:bg-white/10 p-6 rounded-2xl transition border border-white/5 group">
-                    <div class="bg-brand-accent p-4 rounded-full text-white group-hover:scale-110 transition shadow-lg"><i class="ph-fill ph-phone-call text-3xl"></i></div>
-                    <div class="text-center"><span class="block text-sm text-orange-300 uppercase tracking-widest font-bold">Llamadas</span><span class="font-bold text-xl">324 504 0770</span></div>
+            <div class="flex flex-wrap items-center justify-center gap-3.5 mb-12">
+                <a href="mailto:canovoaramirez@gmail.com" class="bg-peri-500 hover:bg-peri-600 text-white px-8 py-4 rounded-full font-semibold text-sm sm:text-base transition shadow-pill inline-flex items-center gap-2.5">
+                    <i class="ph-fill ph-envelope-simple text-lg"></i>
+                    <span>canovoaramirez@gmail.com</span>
                 </a>
-                <a href="mailto:canovoaramirez@gmail.com" class="flex flex-col items-center justify-center gap-3 bg-white/5 hover:bg-white/10 p-6 rounded-2xl transition border border-white/5 group">
-                    <div class="bg-brand-accent p-4 rounded-full text-white group-hover:scale-110 transition shadow-lg"><i class="ph-fill ph-envelope-simple text-3xl"></i></div>
-                    <div class="text-center"><span class="block text-sm text-orange-300 uppercase tracking-widest font-bold">Correo</span><span class="font-bold text-xl">canovoaramirez@gmail.com</span></div>
+                <a href="tel:+573245040770" class="bg-white hover:bg-blush-100 text-ink border border-blush-200 px-7 py-4 rounded-full font-semibold text-sm sm:text-base transition inline-flex items-center gap-2.5 shadow-sm">
+                    <i class="ph-fill ph-phone-call text-peri-500 text-lg"></i>
+                    <span>324 504 0770</span>
                 </a>
             </div>
-            <p class="text-orange-300/60 text-sm mt-16">© 2025 Camila Andrea Novoa Ramírez.</p>
-        </div>
-    </section>
 
-    <div id="lightbox" onclick="closeModal()">
-        <img id="lightbox-img" src="" alt="Full Screen">
+            <div class="flex items-center justify-center gap-3 mb-12">
+                <a href="https://www.linkedin.com/in/camila-andrea-novoa-ram%C3%ADrez-66521b208/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="w-11 h-11 rounded-full bg-white border border-blush-200 hover:border-peri-500 text-ink hover:text-peri-500 flex items-center justify-center transition shadow-sm">
+                    <i class="ph-fill ph-linkedin-logo text-xl"></i>
+                </a>
+                <a href="https://www.instagram.com/andynov0oa/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="w-11 h-11 rounded-full bg-white border border-blush-200 hover:border-rose-400 text-ink hover:text-rose-500 flex items-center justify-center transition shadow-sm">
+                    <i class="ph-fill ph-instagram-logo text-xl"></i>
+                </a>
+                <a href="https://www.youtube.com/channel/UCKAL0EDPntD8evzPsGykpbg" target="_blank" rel="noopener noreferrer" aria-label="YouTube" class="w-11 h-11 rounded-full bg-white border border-blush-200 hover:border-rose-500 text-ink hover:text-rose-500 flex items-center justify-center transition shadow-sm">
+                    <i class="ph-fill ph-youtube-logo text-xl"></i>
+                </a>
+            </div>
+
+            <div class="pt-8 border-t border-blush-200/70 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-muted">
+                <p>© 2026 Camila Andrea Novoa Ramírez.</p>
+                <div class="flex items-center gap-5 font-medium">
+                    <a href="#inicio" class="hover:text-ink transition">Inicio</a>
+                    <a href="#prensa" class="hover:text-ink transition">Portafolio</a>
+                    <a href="#audios" class="hover:text-ink transition">Al Aire</a>
+                    <a href="#multimedia" class="hover:text-ink transition">Reels</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" onclick="if (event.target === this) closeModal()">
+        <button type="button" onclick="closeModal()" aria-label="Cerrar" class="fixed top-5 right-5 w-11 h-11 rounded-full bg-white/15 hover:bg-white/25 text-white flex items-center justify-center transition">
+            <i class="ph-bold ph-x text-xl"></i>
+        </button>
+        <button type="button" onclick="stepModal(-1)" aria-label="Anterior" class="fixed left-4 sm:left-8 w-12 h-12 rounded-full bg-white/15 hover:bg-white/25 text-white flex items-center justify-center transition">
+            <i class="ph-bold ph-caret-left text-2xl"></i>
+        </button>
+        <div class="flex flex-col items-center gap-3">
+            <img id="lightbox-img" src="" alt="Fotografía ampliada">
+            <span id="lightbox-counter" class="text-xs font-semibold tracking-wider text-white/80"></span>
+        </div>
+        <button type="button" onclick="stepModal(1)" aria-label="Siguiente" class="fixed right-4 sm:right-8 w-12 h-12 rounded-full bg-white/15 hover:bg-white/25 text-white flex items-center justify-center transition">
+            <i class="ph-bold ph-caret-right text-2xl"></i>
+        </button>
     </div>
 
-    <a href="https://wa.me/573045570172?text=Hola%20andrea%20estoy%20interesado%20en%20tu%20perfil" target="_blank" class="whatsapp-btn" title="Escribir al WhatsApp">
-        <div class="whatsapp-pulse"></div>
-        <i class="ph-fill ph-whatsapp-logo text-3xl"></i>
+    <!-- Chic WhatsApp Floating CTA -->
+    <a href="https://wa.me/573045570172?text=Hola%20Andrea,%20vi%20tu%20portafolio%20y%20me%20gustar%C3%ADa%20hablar%20contigo" target="_blank" rel="noopener noreferrer" class="whatsapp-cta group" title="Escríbeme por WhatsApp" aria-label="Hablemos por WhatsApp">
+        <span class="relative flex items-center justify-center w-11 h-11 rounded-full bg-gradient-to-br from-peri-500 to-blush-400 text-white shadow-sm flex-shrink-0">
+            <i class="ph-fill ph-whatsapp-logo text-2xl"></i>
+            <span class="absolute -top-0.5 -right-0.5 flex h-3 w-3">
+                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                <span class="relative inline-flex rounded-full h-3 w-3 bg-emerald-400 border-2 border-white"></span>
+            </span>
+        </span>
+        <span class="text-left leading-tight">
+            <span class="block text-[10px] font-bold uppercase tracking-wider text-peri-500">¿Tienes un proyecto?</span>
+            <span class="block text-xs sm:text-sm font-bold text-ink">
+                <span class="hidden sm:inline">Hablemos por WhatsApp</span>
+                <span class="sm:hidden">¡Hablemos!</span>
+            </span>
+        </span>
+        <i class="ph-bold ph-arrow-up-right text-sm text-peri-500 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition"></i>
     </a>
 
     <script>
-        function toggleMenu() { 
-            document.getElementById('mobile-menu').classList.toggle('hidden'); 
+        // Mobile Menu
+        function toggleMenu() {
+            const menu = document.getElementById('mobile-menu');
+            const icon = document.getElementById('menu-icon');
+            const btn = document.getElementById('menu-toggle');
+            const isHidden = menu.classList.toggle('hidden');
+            btn.setAttribute('aria-expanded', String(!isHidden));
+            icon.className = isHidden ? 'ph ph-list text-xl' : 'ph ph-x text-xl';
+        }
+        function closeMenu() {
+            const menu = document.getElementById('mobile-menu');
+            const icon = document.getElementById('menu-icon');
+            const btn = document.getElementById('menu-toggle');
+            menu.classList.add('hidden');
+            btn.setAttribute('aria-expanded', 'false');
+            icon.className = 'ph ph-list text-xl';
         }
 
-        // Script para el Lightbox (Zoom Fotos)
-        function openModal(src) {
-            const lightbox = document.getElementById('lightbox');
-            const img = document.getElementById('lightbox-img');
-            img.src = src;
-            lightbox.style.display = 'flex';
+        // Press Filter
+        function filterPress(tag, button) {
+            document.querySelectorAll('#prensa .filter-pill').forEach(btn => btn.setAttribute('aria-pressed', 'false'));
+            button.setAttribute('aria-pressed', 'true');
+            document.querySelectorAll('#press-grid .press-card').forEach(card => {
+                const tags = card.dataset.tags || '';
+                const show = tag === 'all' || tags.includes(tag);
+                card.classList.toggle('hidden', !show);
+            });
+        }
+
+        // Social Filter
+        function filterSocial(tag, button) {
+            document.querySelectorAll('#cobertura .filter-pill').forEach(btn => btn.setAttribute('aria-pressed', 'false'));
+            button.setAttribute('aria-pressed', 'true');
+            document.querySelectorAll('#social-grid .social-card').forEach(card => {
+                const group = card.dataset.social || '';
+                const show = tag === 'all' || group === tag;
+                card.classList.toggle('hidden', !show);
+            });
+        }
+
+        // Lightbox with Navigation
+        const galleryImages = Array.from(document.querySelectorAll('.gallery-img'));
+        let currentIndex = 0;
+
+        function openModal(index) {
+            currentIndex = index;
+            updateLightbox();
+            document.getElementById('lightbox').classList.add('open');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function updateLightbox() {
+            const img = galleryImages[currentIndex];
+            if (!img) return;
+            document.getElementById('lightbox-img').src = img.getAttribute('src');
+            document.getElementById('lightbox-counter').textContent = `${currentIndex + 1} / ${galleryImages.length}`;
+        }
+
+        function stepModal(delta) {
+            currentIndex = (currentIndex + delta + galleryImages.length) % galleryImages.length;
+            updateLightbox();
         }
 
         function closeModal() {
-            document.getElementById('lightbox').style.display = 'none';
+            document.getElementById('lightbox').classList.remove('open');
+            document.body.style.overflow = '';
         }
+
+        document.addEventListener('keydown', (e) => {
+            const lb = document.getElementById('lightbox');
+            if (!lb.classList.contains('open')) return;
+            if (e.key === 'Escape') closeModal();
+            if (e.key === 'ArrowRight') stepModal(1);
+            if (e.key === 'ArrowLeft') stepModal(-1);
+        });
+
+        // Pause other audio/video when one plays
+        const mediaElements = document.querySelectorAll('audio, video');
+        mediaElements.forEach(media => {
+            media.addEventListener('play', () => {
+                mediaElements.forEach(other => {
+                    if (other !== media && !other.paused) other.pause();
+                });
+            });
+        });
+
+        // Scroll reveal
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.08 });
+
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
     </script>
 </body>
 </html>
